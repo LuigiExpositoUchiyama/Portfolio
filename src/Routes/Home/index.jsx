@@ -65,7 +65,7 @@ const Home = () => {
               </Link>
 
               <Link
-                to="https://github.com/Luigi-Exposito-Uchiyama"
+                to="https://github.com/LuigiExpositoUchiyama"
                 className={`${Social.socialContainer} ${Social.containerThree}`}
                 target="_blank"
               >

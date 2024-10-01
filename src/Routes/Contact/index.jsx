@@ -26,7 +26,7 @@ const Contact = () => {
         </Link>
 
         <Link
-          to="https://github.com/Luigi-Exposito-Uchiyama"
+          to="https://github.com/LuigiExpositoUchiyama"
           className={`${styles.socialContainer} ${styles.containerEight}`}
           target="_blank"
         >
