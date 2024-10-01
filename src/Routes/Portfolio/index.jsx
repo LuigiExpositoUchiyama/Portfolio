@@ -86,7 +86,7 @@ const Portfolio = () => {
       <Project
         title="Burguer Mania"
         description="Apresento o site da Burguer Mania, criado com React e integrado a uma API para fornecer dados dinâmicos sobre nossos hambúrgueres. O site oferece uma navegação prática e intuitiva, permitindo explorar o cardápio com descrições, ingredientes e imagens de cada hambúrguer, garantindo uma experiência envolvente e de qualidade."
-        repositoryLink="https://github.com/Luigi-Exposito-Uchiyama/Burguer-Mania"
+        repositoryLink="https://github.com/LuigiExpositoUchiyama/Burguer-Mania"
         projectLink="https://burguermania.vercel.app"
         videoSource="/Burguer Mania.mp4"
         videoPosition="right"
