@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import Button from '../../Components/Button';
 
 /* IMAGENS */
-import { ReactComponent as PortfolioImg } from '../../assets/portfolio.svg';
+import { ReactComponent as PortfolioImg } from '../../Assets/portfolio.svg';
 
 /* CSS */
 import styles from './Portfolio.module.css';

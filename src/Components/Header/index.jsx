@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import Button from '../Button';
 
 /* IMAGENS */
-import { ReactComponent as Logo } from '../../assets/Logo Luigi.svg';
+import { ReactComponent as Logo } from '../../Assets/Logo Luigi.svg';
 
 /* CSS */
 import '../../App.module.css';

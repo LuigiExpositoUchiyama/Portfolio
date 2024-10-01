@@ -7,11 +7,11 @@ import Button from '../../Components/Button';
 import TypingEffect from '../../Components/TypingEffect';
 
 /* IMAGENS */
-import Instagram from '../../assets/Instagram.png';
-import Github from '../../assets/Github.png';
-import Whatsapp from '../../assets/Whatsapp.png';
-import Linkedin from '../../assets/linkedin.png';
-import { ReactComponent as Perfil } from '../../assets/Perfil.svg';
+import Instagram from '../../Assets/Instagram.png';
+import Github from '../../Assets/Github.png';
+import Whatsapp from '../../Assets/Whatsapp.png';
+import Linkedin from '../../Assets/linkedin.png';
+import { ReactComponent as Perfil } from '../../Assets/Perfil.svg';
 
 /* CSS */
 import '../../App.module.css';

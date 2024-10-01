@@ -1,5 +1,5 @@
 import React from 'react';
-import TeleperformanceImg from '../../assets/Teleperformance.png';
+import TeleperformanceImg from '../../Assets/Teleperformance.png';
 import styles from '../../Styles/Curriculo.module.css';
 import geral from '../../App.module.css';
 

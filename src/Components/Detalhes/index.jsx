@@ -6,10 +6,10 @@ import styles2 from '../Button/Button.module.css';
 import Button from '../Button';
 
 /* IMAGENS */
-import Teleperformance from '../../assets/Teleperformance.png';
-import ThiagoPessoaJoias from '../../assets/ThiagoPessoaJoias.png';
-import Fiap from '../../assets/Fiap.png';
-import Origamid from '../../assets/Curso.png';
+import Teleperformance from '../../Assets/Teleperformance.png';
+import ThiagoPessoaJoias from '../../Assets/ThiagoPessoaJoias.png';
+import Fiap from '../../Assets/Fiap.png';
+import Origamid from '../../Assets/Curso.png';
 
 /* CSS */
 import '../../App.module.css';

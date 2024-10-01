@@ -2,17 +2,17 @@ import React from 'react';
 import Slider from 'react-slick';
 
 /* IMAGENS */
-import ResponsiveWebDevelopment from '../../assets/Certifications/Responsive Web Development.png';
-import FormaçãoSocial from '../../assets/Certifications/Formação Social e Sustentabilidade.png';
-import CSSFlexbox from '../../assets/Certifications/CSS Flexbox.png';
-import CSSGridLayout from '../../assets/Certifications/CSS Grid Layout.png';
-import HTMLeCSSparaIniciantes from '../../assets/Certifications/HTML e CSS para Iniciantes.png';
-import JavaScriptCompletoES6 from '../../assets/Certifications/JavaScript Completo ES6+.png';
-import ReactCompleto from '../../assets/Certifications/React Completo.png';
-import UIDesignAvançado from '../../assets/Certifications/UI Design Avançado.png';
-import UIDesignparaIniciantes from '../../assets/Certifications/UI Design para Iniciantes.png';
-import WordPressComoCMS from '../../assets/Certifications/WordPress Como CMS.png';
-import { ReactComponent as Certificado } from '../../assets/certification.svg';
+import ResponsiveWebDevelopment from '../../Assets/Certifications/Responsive Web Development.png';
+import FormaçãoSocial from '../../Assets/Certifications/Formação Social e Sustentabilidade.png';
+import CSSFlexbox from '../../Assets/Certifications/CSS Flexbox.png';
+import CSSGridLayout from '../../Assets/Certifications/CSS Grid Layout.png';
+import HTMLeCSSparaIniciantes from '../../Assets/Certifications/HTML e CSS para Iniciantes.png';
+import JavaScriptCompletoES6 from '../../Assets/Certifications/JavaScript Completo ES6+.png';
+import ReactCompleto from '../../Assets/Certifications/React Completo.png';
+import UIDesignAvançado from '../../Assets/Certifications/UI Design Avançado.png';
+import UIDesignparaIniciantes from '../../Assets/Certifications/UI Design para Iniciantes.png';
+import WordPressComoCMS from '../../Assets/Certifications/WordPress Como CMS.png';
+import { ReactComponent as Certificado } from '../../Assets/certification.svg';
 
 /* CSS */
 import styles from '../../Styles/Curriculo.module.css';

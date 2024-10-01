@@ -1,5 +1,5 @@
 import React from 'react';
-import ThiagoPessoaJoias from '../../assets/ThiagoPessoaJoias.png';
+import ThiagoPessoaJoias from '../../Assets/ThiagoPessoaJoias.png';
 import styles from '../../Styles/Curriculo.module.css';
 import geral from '../../App.module.css';
 
