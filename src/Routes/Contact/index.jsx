@@ -2,13 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 /* IMAGENS */
-import Twitch from '../../Assets/twitch.svg';
-import Github from '../../Assets/Github2.svg';
-import Tiktok from '../../Assets/Tiktok2.svg';
-import Linkedin from '../../Assets/linkedin 2.0.svg';
-import Gmail from '../../Assets/Gmail.svg';
-import Insta from '../../Assets/insta2.svg';
-import Whats from '../../Assets/wpp.svg';
+import Twitch from '../../assets/twitch.svg';
+import Github from '../../assets/Github2.svg';
+import Tiktok from '../../assets/Tiktok2.svg';
+import Linkedin from '../../assets/linkedin 2.0.svg';
+import Gmail from '../../assets/Gmail.svg';
+import Insta from '../../assets/insta2.svg';
+import Whats from '../../assets/wpp.svg';
 
 /* CSS */
 import styles from '../../Styles/RedesSociais.module.css';

@@ -6,7 +6,7 @@ import Teleperformance from '../../Empresas/Teleperformance';
 import ThiagoPessoa from '../../Empresas/ThiagoPessoa';
 
 /* IMAGENS */
-import { ReactComponent as Experience } from '../../Assets/experience.svg';
+import { ReactComponent as Experience } from '../../assets/experience.svg';
 
 /* CSS */
 import styles from '../../Styles/Curriculo.module.css';
