@@ -44,7 +44,7 @@
 
 .repositorio::before {
   content: "";
-  background-image: url("../Assets/Github.png");
+  background-image: url("../../Assets/Github.png");
   width: 25px;
   height: 25px;
   display: inline-block;
@@ -55,7 +55,7 @@
 
 .link::before {
   content: "";
-  background-image: url("../Assets/Link.png");
+  background-image: url("../../Assets/Link.png");
   width: 25px;
   height: 25px;
   display: inline-block;
