@@ -32,7 +32,7 @@ const Home = () => {
             <a
               className={styles.socialButton}
               href="/curriculo.pdf"
-              download="Currículo Luigi Uchiyama.pdf"
+              download="Currículo - Luigi Uchiyama.pdf"
             >
               <Button>
                 <span className={styles.download}>Meu Currículo</span>
