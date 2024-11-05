@@ -6,8 +6,8 @@ import App from './App.jsx';
 import Home from './Routes/Home';
 import Portfolio from './Routes/Portfolio';
 import Contact from './Routes/Contact';
-import Experience from './Routes/Experience';
-import Education from './Routes/Education';
+import Experience from './Routes/Experiences';
+import Education from './Routes/Educations';
 import Certificates from './Routes/Certificates';
 import Error from './Routes/Error';
 

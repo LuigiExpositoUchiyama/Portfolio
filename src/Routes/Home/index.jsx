@@ -105,11 +105,11 @@ const Home = () => {
             <span>graduação</span>
           </p>
           <p>
-            <span className={styles.tamanho}>+2</span>
+            <span className={styles.tamanho}>+3</span>
             <span>experiências</span>
           </p>
           <p>
-            <span className={styles.tamanho}>+7</span>
+            <span className={styles.tamanho}>+8</span>
             <span>projetos</span>
           </p>
           <p>

@@ -15,7 +15,8 @@ import WordPressComoCMS from '../../Assets/Certifications/WordPress Como CMS.png
 import { ReactComponent as Certificado } from '../../Assets/certification.svg';
 
 /* CSS */
-import styles from '../../Styles/Curriculo.module.css';
+import geral from '../../App.module.css';
+import styles from './Certificates.module.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
@@ -75,7 +76,7 @@ const certificatesDataOrigamid = [
   },
 ];
 
-const CertificatesPage = () => {
+const Certificates = () => {
   const settings = {
     infinite: true,
     speed: 500,
@@ -91,12 +92,12 @@ const CertificatesPage = () => {
 
   return (
     <section>
-      <div className={styles.titulo}>
-        <Certificado className={styles.icons} />
+      <div className={geral.titulo}>
+        <Certificado className={geral.icons} />
         <h1>Certification</h1>
       </div>
 
-      <div className={styles.bgCurriculo}>
+      <div>
         <div className={styles.certificados}>
           <h1>FIAP</h1>
           <Slider {...settings}>
@@ -136,4 +137,4 @@ const CertificatesPage = () => {
   );
 };
 
-export default CertificatesPage;
+export default Certificates;

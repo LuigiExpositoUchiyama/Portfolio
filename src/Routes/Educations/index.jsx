@@ -6,17 +6,18 @@ import Origamid from '../../Assets/Curso.png';
 import Education from '../../Assets/education.png';
 
 /* CSS */
-import styles from '../../Styles/Curriculo.module.css';
+import geral from '../../App.module.css';
+import styles from './Education.module.css';
 
-const EducationPage = () => {
+const Educations = () => {
   return (
     <section>
-      <div className={styles.titulo}>
-        <img src={Education} alt="education" className={styles.icons} />
+      <div className={geral.titulo}>
+        <img src={Education} alt="education" className={geral.icons} />
         <h1>Education</h1>
       </div>
 
-      <div className={styles.bgCurriculo}>
+      <div>
         <div className={styles.texto}>
           <img src={Fiap} alt="Fiap" />
           <div>
@@ -44,4 +45,4 @@ const EducationPage = () => {
   );
 };
 
-export default EducationPage;
+export default Educations;

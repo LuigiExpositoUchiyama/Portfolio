@@ -9,7 +9,7 @@ import { ReactComponent as PortfolioImg } from '../../Assets/portfolio.svg';
 
 /* CSS */
 import styles from './Portfolio.module.css';
-import title from '../../Styles/Curriculo.module.css';
+import geral from '../../App.module.css';
 
 const Project = ({
   title,
@@ -79,8 +79,8 @@ const Project = ({
 const Portfolio = () => {
   return (
     <section>
-      <div className={title.titulo}>
-        <PortfolioImg className={title.icons} />
+      <div className={geral.titulo}>
+        <PortfolioImg className={geral.icons} />
         <h1>Portfólio</h1>
       </div>
       <Project
