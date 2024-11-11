@@ -13,16 +13,8 @@ const ExperienceItem = ({ imgSrc, altText, role, period, details }) => {
   };
 
   return (
-    <section
-      className={`${experience.experience} ${
-        isOpen ? experience.expanded : ''
-      }`}
-    >
-      <div
-        className={experience.detalhes}
-        onClick={toggleDetails}
-        style={{ cursor: 'pointer' }}
-      >
+    <section className={experience.experience}>
+      <div className={experience.detalhes} onClick={toggleDetails}>
         <img src={imgSrc} alt={altText} />
         <div>
           <p>{role}</p>
