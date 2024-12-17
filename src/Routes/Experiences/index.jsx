@@ -12,6 +12,34 @@ import VAImg from '../../Assets/VA.svg';
 const Experiences = () => {
   const experiencesData = [
     {
+      imgSrc: ThiagoPessoaJoiasImg,
+      altText: 'Thiago Pessoa Joias',
+      role: 'Freelancer',
+      period: 'Nov/22 - Agora',
+      details: [
+        {
+          title: '- Gerenciamento do Site em WordPress',
+          description:
+            ' Sou responsável por gerenciar e manter o site Thiago Pessoa, garantindo que todas as informações estejam organizadas e atualizadas.',
+        },
+        {
+          title: '- Atualização de Banners e Produtos',
+          description:
+            ' Realizo a substituição de banners, além de adicionar e atualizar produtos no site de forma precisa, proporcionando uma experiência visual atrativa e informativa para os visitantes.',
+        },
+        {
+          title: '- Criação de Novo Layout',
+          description:
+            ' Desenvolvo e implemento um novo layout para o site, focando em melhorias visuais e de usabilidade. Isso garante um design moderno e alinhado com as necessidades da plataforma e dos usuários.',
+        },
+        {
+          title: '- Ajustes e Manutenção Regular',
+          description:
+            ' Cuido das atualizações técnicas e de conteúdo no WordPress, assegurando que o site esteja sempre funcionando corretamente, sem falhas e alinhado com as melhores práticas do mercado.',
+        },
+      ],
+    },
+    {
       imgSrc: VAImg,
       altText: 'VA Group',
       role: 'Desenvolvedor Junior',
