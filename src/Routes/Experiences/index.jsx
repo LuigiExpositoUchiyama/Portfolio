@@ -15,7 +15,7 @@ const Experiences = () => {
       imgSrc: ThiagoPessoaJoiasImg,
       altText: 'Thiago Pessoa Joias',
       role: 'Freelancer',
-      period: 'Nov/22 - Agora',
+      period: 'Nov/24 - Agora',
       details: [
         {
           title: '- Gerenciamento do Site em WordPress',
