@@ -31,7 +31,7 @@ const Educations = () => {
       altText: 'Fiap',
       title: 'FIAP',
       description:
-        'Atualmente, estou cursando o curso de Análise e Desenvolvimento de Sistemas na FIAP, uma jornada que tem sido fundamental para ampliar minha visão sobre os detalhes tecnológicos e práticas do setor. Durante esse processo, tenho adquirido conhecimentos profundos sobre desenvolvimento de sistemas, arquitetura de software e novas tecnologias, o que tem contribuído significativamente para o meu aprimoramento técnico e profissional. Essa experiência está me permitindo compreender melhor os desafios da área e me capacitando para atuar de forma mais estratégica e eficiente no desenvolvimento de soluções tecnológicas inovadoras',
+        'Sou formado em Análise e Desenvolvimento de Sistemas pela FIAP, uma jornada que foi fundamental para ampliar minha visão sobre os detalhes tecnológicos e práticas do setor. Durante esse processo, adquiri conhecimentos profundos sobre desenvolvimento de sistemas, arquitetura de software e novas tecnologias, o que contribuiu significativamente para o meu aprimoramento técnico e profissional. Essa formação me permitiu compreender melhor os desafios da área e me capacitou para atuar de forma estratégica e eficiente no desenvolvimento de soluções tecnológicas inovadoras.',
       languagesTitle: 'Stack de Desenvolvimento',
       languages: [
         { name: 'HTML', icon: <FaHtml5 style={{ color: '#e34f26' }} /> },
