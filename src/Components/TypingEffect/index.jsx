@@ -5,8 +5,7 @@ import styles from './TypingEffect.module.css';
 
 function TypingEffect() {
   const [typingText, setTypingText] = useState('');
-  const texto =
-    'Eae! Eu sou o Luigi, um Full Stack Junior que mora em São Paulo.';
+  const texto = 'Eae! Eu sou o Luigi Uchiyama.';
   const textoArray = texto.split('');
   const [index, setIndex] = useState(0);
 

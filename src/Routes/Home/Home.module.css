@@ -19,7 +19,6 @@
   background-repeat: no-repeat;
 }
 
-
 .eu {
   color: var(--color-2);
   font-family: 'Font4';
@@ -70,13 +69,13 @@
 }
 
 .eu h1 {
-  max-width: 400px;
+  max-width: 500px;
   font-size: 2rem;
 }
 
 .eu p {
   margin-top: 15px;
-  max-width: 450px;
+  max-width: 550px;
   font-size: 1rem;
 }
 
@@ -91,7 +90,6 @@
   height: 50px;
   font-size: 0.875rem;
 }
-
 
 @media (max-width: 1000px) {
   .intro {

@@ -25,8 +25,9 @@ const Home = () => {
         <div className={styles.eu}>
           <TypingEffect />
           <p>
-            Como um garoto apaixonado por Desenvolvimento, estudo e produzo
-            conteúdo há mais de 2 anos.
+            Sou formado em Análise e Desenvolvimento de Sistemas. Meu foco é
+            criar soluções tecnológicas eficientes e inovadoras para ajudar
+            empresas e pessoas a alcançarem seus objetivos.
           </p>
           <div className={styles.social}>
             <a

@@ -49,9 +49,10 @@ const Detalhes = () => {
       <div className={styles.curriculo}>
         <h1>Education</h1>
         <p>
-          Nos últimos 21 anos, finalizei o Ensino Médio e me aprofundei em
-          cursos de Front-End na Origamid. Agora, estou estudando ADS na FIAP
-          para continuar minha jornada educacional.
+          Finalizei o Ensino Médio, especializei-me em Front-End pela Origamid e
+          me formei em Análise e Desenvolvimento de Sistemas (ADS) pela FIAP.
+          Sigo aprimorando minhas habilidades e aplicando-as em projetos
+          inovadores.
         </p>
         <div className={styles.detalhes}>
           <div className={styles.iconsCurriculo}>
