@@ -107,7 +107,7 @@
   📩 Entre em Contato
 </div>
 
-<div align="center" style="display: flex; gap: 10px;">
+<div align="center" style="display: flex; gap: 10;">
   <a href="https://www.linkedin.com/in/luigi-uchiyama/">
     <img src="https://github.com/LuigiExpositoUchiyama/Portfolio/blob/main/src/Assets/linkedin%202.0.svg" width="24" height="24">
   </a>
