@@ -56,6 +56,6 @@ O meu objetivo é **ajudar empresas** a alcançar seus objetivos com **soluçõe
 
 ## 📩 Entre em Contato
 
-- **[LinkedIn](https://www.linkedin.com/in/luigi-uchiyama/)**: ![LinkedIn Icon](https://img.shields.io/badge/LinkedIn-0A66C2?style=social&logo=linkedin&logoColor=white)
-- **[GitHub](https://github.com/LuigiExpositoUchiyama)**: ![GitHub Icon](https://img.shields.io/badge/GitHub-181717?style=social&logo=github&logoColor=white)
-- **[WhatsApp](https://wa.me/5511957047874)**: ![WhatsApp Icon](https://img.shields.io/badge/WhatsApp-25D366?style=social&logo=whatsapp&logoColor=white)
+- **[LinkedIn](https://www.linkedin.com/in/luigi-uchiyama/)**: ![LinkedIn Icon](https://github.com/LuigiExpositoUchiyama/Portfolio/blob/main/src/Assets/linkedin%202.0.svg)
+- **[GitHub](https://github.com/LuigiExpositoUchiyama)**: ![GitHub Icon](https://github.com/LuigiExpositoUchiyama/Portfolio/blob/main/src/Assets/Github2.svg)
+- **[WhatsApp](https://wa.me/5511957047874)**: ![WhatsApp Icon](https://github.com/LuigiExpositoUchiyama/Portfolio/blob/main/src/Assets/wpp.svg)
