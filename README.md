@@ -1,5 +1,5 @@
 <div align="center">
-  ![Logo](https://github.com/LuigiExpositoUchiyama/Portfolio/blob/main/src/Assets/favicon.svg) Luigi Uchiyama - Desenvolvimento de Sites Personalizados
+  ## ![Logo](https://github.com/LuigiExpositoUchiyama/Portfolio/blob/main/src/Assets/favicon.svg) Luigi Uchiyama - Desenvolvimento de Sites Personalizados
 </div>
 
 Bem-vindo ao repositório de **Luigi Uchiyama**, um especialista em **desenvolvimento de sites personalizados** para empresas e profissionais que desejam aumentar sua **presença online** e **impulsionar suas vendas**.
