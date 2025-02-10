@@ -66,7 +66,7 @@ const Contact = () => {
         </Link>
 
         <Link
-          to="https://wa.me/11957047874"
+          to="https://wa.me/5511957047874"
           className={`${styles.socialContainer} ${styles.containerEleven}`}
           target="_blank"
         >
