@@ -24,7 +24,14 @@ const Project = ({
       <h1 className={styles.tituloMobile}>{title}</h1>
       {videoPosition === 'left' && (
         <Link to={projectLink} target="_blank" rel="noopener noreferrer">
-          <video className={styles.video} id="meuVideo" autoPlay loop muted>
+          <video
+            className={styles.video}
+            id="meuVideo"
+            autoPlay
+            loop
+            muted
+            preload="auto"
+          >
             <source src={videoSource} type="video/mp4" />
           </video>
         </Link>
