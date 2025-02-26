@@ -94,7 +94,7 @@ const Certificates = () => {
     <section>
       <div className={geral.titulo}>
         <Certificado className={geral.icons} />
-        <h1>Certification</h1>
+        <h1>Certificados</h1>
       </div>
 
       <div>

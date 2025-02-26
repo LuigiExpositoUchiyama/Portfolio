@@ -158,7 +158,7 @@ const Experiences = () => {
     <section>
       <div className={geral.titulo}>
         <ExperienceIcon className={geral.icons} />
-        <h1>Experience</h1>
+        <h1>Experiências</h1>
       </div>
 
       <div>

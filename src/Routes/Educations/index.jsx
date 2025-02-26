@@ -95,7 +95,7 @@ const Educations = () => {
     <section>
       <div className={geral.titulo}>
         <img src={Education} alt="education" className={geral.icons} />
-        <h1>Education</h1>
+        <h1>Formações</h1>
       </div>
 
       <div>

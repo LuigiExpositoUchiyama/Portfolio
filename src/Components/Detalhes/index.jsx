@@ -19,7 +19,7 @@ const Detalhes = () => {
   return (
     <section className={`container2 ${styles.carreira}`}>
       <div className={styles.curriculo}>
-        <h1>Experience</h1>
+        <h1>Experiências</h1>
         <p>
           Já fiz parte do time de algumas empresas e agora gostaria de
           compartilhar minha experiência, cada um proporcionando insights únicos
@@ -47,7 +47,7 @@ const Detalhes = () => {
       </div>
 
       <div className={styles.curriculo}>
-        <h1>Education</h1>
+        <h1>Formações</h1>
         <p>
           Finalizei o Ensino Médio, especializei-me em Front-End pela Origamid e
           me formei em Análise e Desenvolvimento de Sistemas (ADS) pela FIAP.
@@ -72,7 +72,7 @@ const Detalhes = () => {
       </div>
 
       <div className={styles.curriculo}>
-        <h1>Certificates</h1>
+        <h1>Certificados</h1>
         <p>
           Durante minha jornada de estudos, conquistei certificados que
           demonstram minha dedicação ao aprendizado, comprovando minha busca

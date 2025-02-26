@@ -51,7 +51,7 @@ const Header = () => {
           <ul className={styles.header} id="menu" role="menu">
             <li className={styles.menuItem}>
               <Link to="/" onClick={closeMenu}>
-                About Me
+                Sobre mim
               </Link>
             </li>
             <li className={styles.menuItem}>
@@ -61,7 +61,7 @@ const Header = () => {
             </li>
             <li className={styles.menuItem}>
               <Link to="/contact" onClick={closeMenu}>
-                Contact
+                Contato
               </Link>
             </li>
           </ul>
