@@ -19,7 +19,6 @@ import {
 
 import Fiap from '../../Assets/Fiap.png';
 import Origamid from '../../Assets/Curso.png';
-import Education from '../../Assets/education.png';
 
 import geral from '../../App.module.css';
 import styles from './Education.module.css';
@@ -94,7 +93,6 @@ const Educations = () => {
   return (
     <section>
       <div className={geral.titulo}>
-        <img src={Education} alt="education" className={geral.icons} />
         <h1>Formações</h1>
       </div>
 

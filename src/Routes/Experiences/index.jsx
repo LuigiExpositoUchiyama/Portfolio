@@ -1,6 +1,5 @@
 import React from 'react';
 import ExperienceItem from '../../Components/ExperienceItem';
-import { ReactComponent as ExperienceIcon } from '../../Assets/experience.svg';
 import geral from '../../App.module.css';
 import styles from './Experience.module.css';
 
@@ -157,7 +156,6 @@ const Experiences = () => {
   return (
     <section>
       <div className={geral.titulo}>
-        <ExperienceIcon className={geral.icons} />
         <h1>Experiências</h1>
       </div>
 

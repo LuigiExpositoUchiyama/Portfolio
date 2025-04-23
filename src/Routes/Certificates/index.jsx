@@ -12,7 +12,6 @@ import ReactCompleto from '../../Assets/Certifications/React Completo.png';
 import UIDesignAvançado from '../../Assets/Certifications/UI Design Avançado.png';
 import UIDesignparaIniciantes from '../../Assets/Certifications/UI Design para Iniciantes.png';
 import WordPressComoCMS from '../../Assets/Certifications/WordPress Como CMS.png';
-import { ReactComponent as Certificado } from '../../Assets/certification.svg';
 
 /* CSS */
 import geral from '../../App.module.css';
@@ -93,44 +92,46 @@ const Certificates = () => {
   return (
     <section>
       <div className={geral.titulo}>
-        <Certificado className={geral.icons} />
         <h1>Certificados</h1>
       </div>
 
       <div>
         <div className={styles.certificados}>
-          <h1>FIAP</h1>
-          <Slider {...settings}>
-            {certificatesDataFIAP.map((certificate, index) => (
-              <div key={index}>
-                <a
-                  href={certificate.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img src={certificate.img} alt={certificate.title} />
-                  <p>{certificate.title}</p>
-                </a>
-              </div>
-            ))}
-          </Slider>
+          <div>
+            <h1>FIAP</h1>
+            <Slider {...settings}>
+              {certificatesDataFIAP.map((certificate, index) => (
+                <div key={index}>
+                  <a
+                    href={certificate.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={certificate.img} alt={certificate.title} />
+                    <p>{certificate.title}</p>
+                  </a>
+                </div>
+              ))}
+            </Slider>
+          </div>
+          <div>
+            <h1 className={styles.separacao}>Origamid</h1>
 
-          <h1 className={styles.separacao}>Origamid</h1>
-
-          <Slider {...settings}>
-            {certificatesDataOrigamid.map((certificate, index) => (
-              <div key={index}>
-                <a
-                  href={certificate.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img src={certificate.img} alt={certificate.title} />
-                  <p>{certificate.title}</p>
-                </a>
-              </div>
-            ))}
-          </Slider>
+            <Slider {...settings}>
+              {certificatesDataOrigamid.map((certificate, index) => (
+                <div key={index}>
+                  <a
+                    href={certificate.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={certificate.img} alt={certificate.title} />
+                    <p>{certificate.title}</p>
+                  </a>
+                </div>
+              ))}
+            </Slider>
+          </div>
         </div>
       </div>
     </section>
