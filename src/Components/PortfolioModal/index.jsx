@@ -3,7 +3,7 @@ import { FaGithub } from 'react-icons/fa'; // Ícone do GitHub
 import projeto from '../../Assets/Link.png'; // Importe a imagem
 
 /* CSS */
-import button from '../button/Button.module.css';
+import button from '../Button/Button.module.css';
 import styles from './PortfolioModal.module.css';
 
 const PortfolioModal = ({
