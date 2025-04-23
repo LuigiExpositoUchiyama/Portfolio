@@ -24,6 +24,10 @@
   color: var(--color-4);
 }
 
+.active {
+  color: var(--color-4);
+}
+
 @media (max-width: 750px) {
   .bgHeader .button {
     display: none;

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 /* ACESSIBILIDADE */
 import Button from '../Button';
@@ -26,11 +26,10 @@ const Header = () => {
   return (
     <div>
       <header className={`container ${styles.bgHeader}`}>
-        <Link to="/" aria-label="Logo Luigi">
+        <NavLink to="/" aria-label="Logo Luigi">
           <Logo />
-        </Link>
+        </NavLink>
         <div className={menu.hamburger} onClick={toggleMenu}>
-          {' '}
           <div className={menu.menuMobile}>
             <div className={menu.textMenu}>
               <p>Menu</p>
@@ -47,29 +46,45 @@ const Header = () => {
         <nav
           className={`${menu.menuFechado} ${showMenu ? menu.menuAberto : ''}`}
         >
-          {' '}
           <ul className={styles.header} id="menu" role="menu">
             <li className={styles.menuItem}>
-              <Link to="/" onClick={closeMenu}>
+              <NavLink
+                to="/"
+                onClick={closeMenu}
+                className={({ isActive }) => `${isActive ? styles.active : ''}`}
+                end
+              >
                 Sobre mim
-              </Link>
+              </NavLink>
             </li>
             <li className={styles.menuItem}>
-              <Link to="/portfolio" onClick={closeMenu}>
+              <NavLink
+                to="/portfolio"
+                onClick={closeMenu}
+                className={({ isActive }) =>
+                  `${styles.menuLink} ${isActive ? styles.active : ''}`
+                }
+              >
                 Portfólio
-              </Link>
+              </NavLink>
             </li>
             <li className={styles.menuItem}>
-              <Link to="/contact" onClick={closeMenu}>
+              <NavLink
+                to="/contact"
+                onClick={closeMenu}
+                className={({ isActive }) =>
+                  `${styles.menuLink} ${isActive ? styles.active : ''}`
+                }
+              >
                 Contato
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </nav>
 
-        <Link to="/contact" className={styles.button}>
+        <NavLink to="/contact" className={styles.button}>
           <Button>Me Contrate!</Button>
-        </Link>
+        </NavLink>
       </header>
     </div>
   );
