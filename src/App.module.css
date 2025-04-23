@@ -1,18 +1,44 @@
-body,
-h1,
-h2,
-h3,
-ul,
-li,
-p {
-  margin: 0px;
-  padding: 0px;
-  font-family: 'Font4';
+/* Reset de margens e paddings */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* Fontes */
+@font-face {
+  font-family: 'Font1'; 
+  src: url('./fonts/TropiLand-L3MPg.ttf') format('truetype'); 
+}
+@font-face {
+  font-family: 'Font2'; 
+  src: url('./fonts/minagi-bristone.ttf') format('truetype'); 
+}
+@font-face {
+  font-family: 'Font3'; 
+  src: url('./fonts/Poppins-Bold.ttf') format('truetype'); 
+}
+@font-face {
+  font-family: 'Font4'; 
+  src: url('./fonts/Poppins-Regular.ttf') format('truetype'); 
+}
+
+/* Definindo cores de forma centralizada */
+:root {
+  --color-1: #212121;
+  --color-2: #dedede;
+  --color-3: linear-gradient(to bottom right, #40C9FF, #E81CFF);
+  --color-4: #E81CFF;
+  --color-5: #40C9FF;
+}
+
+/* Body */
 body {
   background: var(--color-1);
   overflow-x: hidden;
+  font-family: 'Font4', sans-serif;
 }
 
 body::-webkit-scrollbar {
@@ -28,75 +54,47 @@ body::-webkit-scrollbar-track {
   background: transparent;
 }
 
+/* Links */
 a {
   text-decoration: none;
   color: inherit;
 }
 
+/* Lista */
 ul {
-  padding: 0px;
   list-style: none;
 }
 
-@font-face {
-  font-family: 'Font1'; 
-  src: url('./fonts/TropiLand-L3MPg.ttf') format('truetype'); 
-}
-
-@font-face {
-  font-family: 'Font2'; 
-  src: url('./fonts/minagi-bristone.ttf') format('truetype'); 
-}
-
-@font-face {
-  font-family: 'Font3'; 
-  src: url('./fonts/Poppins-Bold.ttf') format('truetype'); 
-}
-
-@font-face {
-  font-family: 'Font4'; 
-  src: url('./fonts/Poppins-Regular.ttf') format('truetype'); 
-}
-
-.cor1 {
-  color: var(--color-4);
-}
-
-.cor2 {
-  color: var(--color-5);
-}
-
-:root {
-  --color-1: #212121;
-  --color-2: #dedede;
-  --color-3: linear-gradient(to bottom right, #40C9FF, #E81CFF);
-  --color-4: #E81CFF;
-  --color-5: #40C9FF;
+/* Estilos para textos e títulos */
+h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
 }
 
 .poppins-bold {
   font-family: 'Font3';
 }
 
-.titulo h1{
+/* Estilos para o título */
+.titulo h1 {
   font-family: 'Font1';
-  font-size: 3rem; /* 18px */
+  font-size: 3rem; 
   color: var(--color-5);
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 30px auto 15px auto;
+  margin: 30px auto 15px;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
-
+/* Media Queries */
 @media (max-width: 1000px) {
-  .titulo h1{
+  .titulo h1 {
     font-size: 2rem;
   }
-  
+
   .icons {
     max-width: 100px;
   }

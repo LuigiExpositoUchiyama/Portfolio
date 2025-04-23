@@ -17,6 +17,7 @@ const Portfolio = () => {
     setIsModalOpen(false);
     setSelectedProject(null);
   };
+
   const projects = [
     {
       title: 'Burguer Mania',
@@ -129,6 +130,7 @@ const Portfolio = () => {
       if (el) observer.observe(el);
     });
 
+    // Função de cleanup
     return () => {
       currentItems.forEach((el) => {
         if (el) observer.unobserve(el);
@@ -136,34 +138,39 @@ const Portfolio = () => {
     };
   }, []);
 
-  const renderProjects = (category) =>
-    projects
-      .filter((project) => project.category === category)
-      .map((project, index) => (
-        <div
-          key={index}
-          className={`${styles.portfolioItem}`}
-          onClick={() => openModal(project)}
-          ref={(el) => (itemsRef.current[index] = el)}
-        >
-          <div className={styles.imageContainer}>
-            <img
-              src={project.imageSource}
-              alt={project.title}
-              className={styles.projectImage}
-            />
-            <div className={styles.overlay}>
-              <div className={styles.textContainer}>
-                <h2 className={styles.projectTitle}>{project.title}</h2>
-              </div>
-            </div>
-          </div>
-          <div className={`${styles.bottomBar}`}>
-            <span>{project.description}</span>
-            <button className={styles.viewMoreButton}>Ver mais</button>
+  const renderProject = (project) => (
+    <div
+      key={project.repoLink}
+      className={styles.portfolioItem}
+      onClick={() => openModal(project)}
+      ref={(el) => (itemsRef.current[project.title] = el)}
+    >
+      <div className={styles.imageContainer}>
+        <img
+          src={project.imageSource}
+          alt={project.title}
+          className={styles.projectImage}
+        />
+        <div className={styles.overlay}>
+          <div className={styles.textContainer}>
+            <h2 className={styles.projectTitle}>{project.title}</h2>
           </div>
         </div>
-      ));
+      </div>
+      <div className={styles.bottomBar}>
+        <span>{project.description}</span>
+        <button className={styles.viewMoreButton}>Ver mais</button>
+      </div>
+    </div>
+  );
+
+  const renderProjectsByCategory = (category) => (
+    <div className={styles.portfolioContainer}>
+      {projects
+        .filter((project) => project.category === category)
+        .map(renderProject)}
+    </div>
+  );
 
   return (
     <section>
@@ -174,16 +181,12 @@ const Portfolio = () => {
       <div className={styles.sectionTitle}>
         <h2>Projetos de Cliente</h2>
       </div>
-      <div className={styles.portfolioContainer}>
-        {renderProjects('cliente')}
-      </div>
+      {renderProjectsByCategory('cliente')}
 
       <div className={styles.sectionTitle}>
         <h2>Projetos de Estudo</h2>
       </div>
-      <div className={styles.portfolioContainer}>
-        {renderProjects('estudo')}
-      </div>
+      {renderProjectsByCategory('estudo')}
 
       {isModalOpen && selectedProject && (
         <PortfolioModal

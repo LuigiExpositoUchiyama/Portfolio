@@ -1,3 +1,14 @@
+:root {
+  --primary-color: rgb(44, 44, 44);
+  --highlight-color-1: #d62976;
+  --highlight-color-2: #128C7E;
+  --highlight-color-3: #0072b1;
+  --highlight-color-4: #00acee;
+  --social-hover-duration: .3s;
+  --social-container-size: 52px;
+  --social-svg-size: 20px;
+}
+
 .card {
   width: fit-content;
   height: fit-content;
@@ -6,106 +17,82 @@
   justify-content: center;
   padding: 25px;
   gap: 20px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
 }
 
+/* Contêiner de ícones sociais */
 .socialContainer {
-  width: 52px;
-  height: 52px;
-  background-color: rgb(44, 44, 44);
+  width: var(--social-container-size);
+  height: var(--social-container-size);
+  background-color: var(--primary-color);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  transition-duration: .3s;
+  transition: background-color var(--social-hover-duration), transform var(--social-hover-duration);
   color: #fff;
-}
-/* instagram*/
-.containerOne:hover {
-  background-color: #d62976;
-  transition-duration: .3s;
-  color: #fff;
-}
-/* twitter*/
-.containerTwo:hover {
-  background-color: #128C7E;
-  transition-duration: .3s;
-}
-/* linkdin*/
-.containerThree:hover {
-  background-color: #0072b1;
-  transition-duration: .3s;
-}
-/* Whatsapp*/
-.containerFour:hover {
-  background-color: #00acee;
-  transition-duration: .3s;
+  border-radius: 10px;
 }
 
-.containerFive:hover {
-  background-color: #d62976;
-  transition-duration: .3s;
-}
+/* Definindo as cores dos ícones sociais ao passar o mouse */
+.containerOne:hover { background-color: var(--highlight-color-1); }
+.containerTwo:hover { background-color: var(--highlight-color-2); }
+.containerThree:hover { background-color: var(--highlight-color-3); }
+.containerFour:hover { background-color: var(--highlight-color-4); }
 
-.containerSix:hover {
-  background-color: #d62976;
-  transition-duration: .3s;
-}
-
+.containerFive:hover,
+.containerSix:hover,
 .containerSeven:hover {
-  background-color: #d62976;
-  transition-duration: .3s;
+  background-color: var(--highlight-color-1);
 }
 
 .containerEight:hover {
-  background-color: var(--color-5);
-  transition-duration: .3s;
+  background-color: var(--highlight-color-1);
 }
 
 .containerNine:hover {
-  background-color: #00acee;
-  transition-duration: .3s;
+  background-color: var(--highlight-color-4);
 }
 
 .containerTen:hover {
-  background-color: #0072b1;
-  transition-duration: .3s;
+  background-color: var(--highlight-color-3);
 }
 
 .containerEleven:hover {
-  background-color: #128C7E;
-  transition-duration: .3s;
+  background-color: var(--highlight-color-2);
 }
 
+/* Efeito de clique (active) */
 .socialContainer:active {
   transform: scale(0.9);
-  transition-duration: .3s;
 }
 
+/* Definindo o tamanho do ícone */
 .socialSvg {
-  max-width: 20px;
+  max-width: var(--social-svg-size);
 }
 
 .socialSvg path {
-  fill: rgb(255, 255, 255);
+  fill: #fff;
 }
 
+/* Animação ao passar o mouse nos ícones */
 .socialContainer:hover .socialSvg {
   animation: slide-in-top 0.3s both;
 }
 
+/* Animação de deslizamento */
 @keyframes slide-in-top {
   0% {
     transform: translateY(-50px);
     opacity: 0;
   }
-
   100% {
     transform: translateY(0);
     opacity: 1;
   }
 }
 
+/* Estilos para a seção de contato */
 .contact {
   display: flex;
   justify-content: center;
@@ -117,9 +104,10 @@
   width: 20px;
 }
 
+/* Responsividade para telas menores */
 @media (max-width: 700px) {
   .card {
-    padding: 30px 0px;
+    padding: 30px 0;
     max-width: 300px;
   }
 
