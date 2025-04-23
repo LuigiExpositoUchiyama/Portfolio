@@ -17,8 +17,8 @@ import {
   FaFigma,
 } from 'react-icons/fa';
 
-import Fiap from '../../Assets/Fiap.png';
-import Origamid from '../../Assets/Curso.png';
+import Fiap from '/icons/Fiap.png';
+import Origamid from '/icons/Curso.png';
 
 import geral from '../../App.module.css';
 import styles from './Education.module.css';

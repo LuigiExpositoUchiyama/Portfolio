@@ -4,8 +4,8 @@ import geral from '../../App.module.css';
 import styles from './Experience.module.css';
 
 /* Imagens */
-import TeleperformanceImg from '../../Assets/Teleperformance.png';
-import ThiagoPessoaJoiasImg from '../../Assets/ThiagoPessoaJoias.png';
+import TeleperformanceImg from '/icons/Teleperformance.png';
+import ThiagoPessoaJoiasImg from '/icons/ThiagoPessoaJoias.png';
 import VAImg from '../../Assets/VA.svg';
 
 const Experiences = () => {

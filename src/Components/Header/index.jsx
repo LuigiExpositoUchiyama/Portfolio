@@ -4,9 +4,6 @@ import { NavLink } from 'react-router-dom';
 /* ACESSIBILIDADE */
 import Button from '../Button';
 
-/* IMAGENS */
-import { ReactComponent as Logo } from '../../Assets/Logo Luigi.svg';
-
 /* CSS */
 import '../../App.module.css';
 import styles from './Header.module.css';
@@ -27,7 +24,8 @@ const Header = () => {
     <div>
       <header className={`container ${styles.bgHeader}`}>
         <NavLink to="/" aria-label="Logo Luigi">
-          <Logo />
+          {/* Usando imagem diretamente do diretório public */}
+          <img src="/logo.svg" alt="Logo Luigi" />
         </NavLink>
         <div className={menu.hamburger} onClick={toggleMenu}>
           <div className={menu.menuMobile}>

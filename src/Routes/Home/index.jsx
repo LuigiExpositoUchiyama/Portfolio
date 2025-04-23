@@ -8,6 +8,7 @@ import TypingEffect from '../../Components/TypingEffect';
 
 /* ÍCONES DO REACT */
 import { FaInstagram, FaGithub, FaWhatsapp, FaLinkedin } from 'react-icons/fa';
+import { HiOutlineDownload } from 'react-icons/hi'; // Importando o ícone de download com contorno
 
 /* IMAGENS */
 import { ReactComponent as Perfil } from '../../Assets/Perfil.svg'; // Foto de perfil
@@ -16,6 +17,33 @@ import { ReactComponent as Perfil } from '../../Assets/Perfil.svg'; // Foto de p
 import '../../App.module.css';
 import styles from './Home.module.css';
 import Social from '../../Styles/RedesSociais.module.css';
+
+const socialLinks = [
+  {
+    href: 'https://www.instagram.com/dev.luigiuchiyama/',
+    Icon: FaInstagram,
+    alt: 'Instagram',
+    className: Social.containerOne,
+  },
+  {
+    href: 'https://wa.me/11957047874',
+    Icon: FaWhatsapp,
+    alt: 'WhatsApp',
+    className: Social.containerTwo,
+  },
+  {
+    href: 'https://github.com/LuigiExpositoUchiyama',
+    Icon: FaGithub,
+    alt: 'GitHub',
+    className: Social.containerThree,
+  },
+  {
+    href: 'https://www.linkedin.com/in/luigi-uchiyama/',
+    Icon: FaLinkedin,
+    alt: 'LinkedIn',
+    className: Social.containerFour,
+  },
+];
 
 const Home = () => {
   return (
@@ -35,46 +63,26 @@ const Home = () => {
               download="Currículo - Luigi Uchiyama.pdf"
             >
               <Button>
-                <span className={styles.download}>Meu Currículo</span>
+                <div className={styles.download}>
+                  <HiOutlineDownload className={styles.icon} />
+                  <span>Meu Currículo</span>
+                </div>
               </Button>
             </a>
 
             <div className={Social.card}>
-              <a
-                href="https://www.instagram.com/dev.luigiuchiyama/"
-                className={`${Social.socialContainer} ${Social.containerOne}`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaInstagram className={Social.socialSvg} />
-              </a>
-
-              <a
-                href="https://wa.me/11957047874"
-                className={`${Social.socialContainer} ${Social.containerTwo}`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaWhatsapp className={Social.socialSvg} />
-              </a>
-
-              <a
-                href="https://github.com/LuigiExpositoUchiyama"
-                className={`${Social.socialContainer} ${Social.containerThree}`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaGithub className={Social.socialSvg} />
-              </a>
-
-              <a
-                href="https://www.linkedin.com/in/luigi-uchiyama/"
-                className={`${Social.socialContainer} ${Social.containerFour}`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaLinkedin className={Social.socialSvg} />
-              </a>
+              {socialLinks.map(({ href, Icon, alt, className }, index) => (
+                <a
+                  key={index}
+                  href={href}
+                  className={`${Social.socialContainer} ${className}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Visite meu perfil no ${alt}`} // Acessibilidade
+                >
+                  <Icon className={Social.socialSvg} />
+                </a>
+              ))}
             </div>
           </div>
         </div>
@@ -89,11 +97,26 @@ const Home = () => {
         <h1>Minhas Conquistas</h1>
         <div className={styles.dados}>
           {[
-            { label: 'graduação', value: '+1' },
-            { label: 'experiências', value: '+4' },
-            { label: 'projetos', value: '+8' },
-            { label: 'certificados', value: '+10' },
-            { label: 'cursos', value: '+12' },
+            {
+              label: 'graduação',
+              value: '+1',
+            },
+            {
+              label: 'experiências',
+              value: '+4',
+            },
+            {
+              label: 'projetos',
+              value: '+8',
+            },
+            {
+              label: 'certificados',
+              value: '+10',
+            },
+            {
+              label: 'cursos',
+              value: '+12',
+            },
           ].map(({ label, value }) => (
             <p key={label}>
               <span className={styles.tamanho}>{value}</span>

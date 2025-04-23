@@ -1,77 +1,78 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-/* IMAGENS */
-import Twitch from '../../Assets/twitch.svg';
-import Github from '../../Assets/Github2.svg';
-import Tiktok from '../../Assets/Tiktok2.svg';
-import Linkedin from '../../Assets/linkedin 2.0.svg';
-import Gmail from '../../Assets/Gmail.svg';
-import Insta from '../../Assets/insta2.svg';
-import Whats from '../../Assets/wpp.svg';
+import {
+  FaTwitch,
+  FaGithub,
+  FaTiktok,
+  FaLinkedin,
+  FaEnvelope,
+  FaInstagram,
+  FaWhatsapp,
+} from 'react-icons/fa'; // Importando ícones
 
 /* CSS */
 import styles from '../../Styles/RedesSociais.module.css';
+
+const socialLinks = [
+  {
+    href: 'https://www.twitch.tv/luigi_uchiyama',
+    Icon: FaTwitch,
+    alt: 'Twitch',
+    className: styles.containerSeven,
+  },
+  {
+    href: 'https://github.com/LuigiExpositoUchiyama',
+    Icon: FaGithub,
+    alt: 'Github',
+    className: styles.containerEight,
+  },
+  {
+    href: 'https://www.tiktok.com/@luigiuchiyama',
+    Icon: FaTiktok,
+    alt: 'Tiktok',
+    className: styles.containerSix,
+  },
+  {
+    href: 'https://www.linkedin.com/in/luigi-uchiyama/',
+    Icon: FaLinkedin,
+    alt: 'Linkedin',
+    className: styles.containerNine,
+  },
+  {
+    href: 'https://mail.google.com/mail/u/0/#inbox',
+    Icon: FaEnvelope,
+    alt: 'Gmail',
+    className: styles.containerTen,
+  },
+  {
+    href: 'https://www.instagram.com/dev.luigiuchiyama/',
+    Icon: FaInstagram,
+    alt: 'Instagram',
+    className: styles.containerFive,
+  },
+  {
+    href: 'https://wa.me/5511957047874',
+    Icon: FaWhatsapp,
+    alt: 'WhatsApp',
+    className: styles.containerEleven,
+  },
+];
 
 const Contact = () => {
   return (
     <section className={styles.contact}>
       <div className={styles.card}>
-        <Link
-          to="https://www.twitch.tv/luigi_uchiyama"
-          className={`${styles.socialContainer} ${styles.containerSeven}`}
-          target="_blank"
-        >
-          <img className={styles.socialSvg} src={Twitch} alt="Twitch"></img>
-        </Link>
-
-        <Link
-          to="https://github.com/LuigiExpositoUchiyama"
-          className={`${styles.socialContainer} ${styles.containerEight}`}
-          target="_blank"
-        >
-          <img className={styles.socialSvg} src={Github} alt="Github"></img>
-        </Link>
-
-        <Link
-          to="https://www.tiktok.com/@luigiuchiyama"
-          className={`${styles.socialContainer} ${styles.containerSix}`}
-          target="_blank"
-        >
-          <img className={styles.socialSvg} src={Tiktok} alt="Tiktok"></img>
-        </Link>
-
-        <Link
-          to="https://www.linkedin.com/in/luigi-uchiyama/"
-          className={`${styles.socialContainer} ${styles.containerNine}`}
-          target="_blank"
-        >
-          <img className={styles.socialSvg} src={Linkedin} alt="Linkedin"></img>
-        </Link>
-
-        <Link
-          to="https://mail.google.com/mail/u/0/#inbox"
-          className={`${styles.socialContainer} ${styles.containerTen}`}
-          target="_blank"
-        >
-          <img className={styles.socialSvg} src={Gmail} alt="Gmail"></img>
-        </Link>
-
-        <Link
-          to="https://www.instagram.com/dev.luigiuchiyama/"
-          className={`${styles.socialContainer} ${styles.containerFive}`}
-          target="_blank"
-        >
-          <img className={styles.socialSvg} src={Insta} alt="Insta"></img>
-        </Link>
-
-        <Link
-          to="https://wa.me/5511957047874"
-          className={`${styles.socialContainer} ${styles.containerEleven}`}
-          target="_blank"
-        >
-          <img className={styles.socialSvg} src={Whats} alt="Whats"></img>
-        </Link>
+        {socialLinks.map(({ href, Icon, alt, className }, index) => (
+          <Link
+            key={index}
+            to={href}
+            className={`${styles.socialContainer} ${className}`}
+            target="_blank"
+            aria-label={`Visite meu perfil no ${alt}`}
+          >
+            <Icon className={styles.socialSvg} aria-hidden="true" />
+          </Link>
+        ))}
       </div>
     </section>
   );

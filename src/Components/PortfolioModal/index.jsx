@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaGithub } from 'react-icons/fa'; // Ícone do GitHub
-import projeto from '../../Assets/Link.png'; // Importe a imagem
+import projeto from '/icons/Link.png'; // Importe a imagem
 
 /* CSS */
 import button from '../Button/Button.module.css';

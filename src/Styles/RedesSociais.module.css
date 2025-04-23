@@ -19,6 +19,10 @@
   gap: 20px;
 }
 
+.socialSvg {
+  font-size: 20px;
+}
+
 /* Contêiner de ícones sociais */
 .socialContainer {
   width: var(--social-container-size);

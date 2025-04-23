@@ -8,15 +8,14 @@
   margin-top: 120px;
 }
 
-.download::before {
-  content: "";
-  background-image: url("../../Assets/download.png");
-  width: 15px;
-  height: 15px;
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 10px; 
-  background-repeat: no-repeat;
+.download {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon {
+  font-size: 20px;
 }
 
 .eu {
