@@ -24,7 +24,6 @@ const Header = () => {
     <div>
       <header className={`container ${styles.bgHeader}`}>
         <NavLink to="/" aria-label="Logo Luigi">
-          {/* Usando imagem diretamente do diretório public */}
           <img src="/logo.svg" alt="Logo Luigi" />
         </NavLink>
         <div className={menu.hamburger} onClick={toggleMenu}>

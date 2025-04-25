@@ -32,7 +32,7 @@ const Portfolio = () => {
     },
     {
       title: 'Lavagem Aquarius',
-      description: 'Plataforma virtual para lava-rápido.',
+      description: 'Plataforma virtual para Lava Rápido.',
       detailedDescription:
         'Apresento o site do Lava-Rápido Aquarius, uma plataforma virtual que oferece uma visão abrangente dos serviços de lavagem disponíveis, assim como sua localização conveniente para os clientes. Este site foi projetado para transmitir qualidade e praticidade, apresentando informações essenciais de forma clara e acessível aos visitantes.',
       imageSource: '/img/lavagemAquarius.png',

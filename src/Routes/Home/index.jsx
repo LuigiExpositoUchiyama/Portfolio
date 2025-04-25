@@ -48,23 +48,23 @@ const socialLinks = [
 const Home = () => {
   return (
     <section>
-      <div className={styles.intro}>
-        <div className={styles.eu}>
+      <div className={styles.introContainer}>
+        <div className={styles.introText}>
           <TypingEffect />
           <p>
             Sou formado em Análise e Desenvolvimento de Sistemas. Meu foco é
             criar soluções tecnológicas eficientes e inovadoras para ajudar
             empresas e pessoas a alcançarem seus objetivos.
           </p>
-          <div className={styles.social}>
+          <div className={styles.socialLinks}>
             <a
-              className={styles.socialButton}
+              className={styles.socialLinkButton}
               href="/Currículo - Luigi Uchiyama.pdf"
               download="Currículo - Luigi Uchiyama.pdf"
             >
               <Button>
-                <div className={styles.download}>
-                  <HiOutlineDownload className={styles.icon} />
+                <div className={styles.downloadButton}>
+                  <HiOutlineDownload className={styles.iconStyle} />
                   <span>Meu Currículo</span>
                 </div>
               </Button>
@@ -87,15 +87,15 @@ const Home = () => {
           </div>
         </div>
         <div>
-          <Perfil className={styles.foto} />
+          <Perfil className={styles.profileImage} />
         </div>
       </div>
 
       <Detalhes />
 
-      <div className={styles.bgDados}>
+      <div className={styles.statsBackground}>
         <h1>Minhas Conquistas</h1>
-        <div className={styles.dados}>
+        <div className={styles.statsContainer}>
           {[
             {
               label: 'graduação',
@@ -107,7 +107,7 @@ const Home = () => {
             },
             {
               label: 'projetos',
-              value: '+8',
+              value: '+10',
             },
             {
               label: 'certificados',
@@ -119,7 +119,7 @@ const Home = () => {
             },
           ].map(({ label, value }) => (
             <p key={label}>
-              <span className={styles.tamanho}>{value}</span>
+              <span className={styles.statsNumber}>{value}</span>
               <span>{label}</span>
             </p>
           ))}

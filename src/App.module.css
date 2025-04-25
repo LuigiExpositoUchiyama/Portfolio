@@ -78,8 +78,8 @@ h1, h2, h3, p, ul, li {
 
 /* Estilos para o título */
 .titulo h1 {
-  font-family: 'Font1';
-  font-size: 3rem; 
+  font-family: 'Font3';
+  font-size: 2rem; 
   color: var(--color-5);
   text-align: center;
   display: flex;
