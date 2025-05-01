@@ -7,7 +7,7 @@ import FormaçãoSocial from '/certifications/Formação Social e Sustentabilida
 import CSSFlexbox from '/certifications/CSS Flexbox.png';
 import CSSGridLayout from '/certifications/CSS Grid Layout.png';
 import HTMLeCSSparaIniciantes from '/certifications/HTML e CSS para Iniciantes.png';
-import JavaScriptCompletoES6 from '/certifications/JavaScript Completo ES6+.png';
+import JavaScriptCompletoES6 from '/certifications/JavaScript Completo.png';
 import ReactCompleto from '/certifications/React Completo.png';
 import UIDesignAvançado from '/certifications/UI Design Avançado.png';
 import UIDesignparaIniciantes from '/certifications/UI Design para Iniciantes.png';

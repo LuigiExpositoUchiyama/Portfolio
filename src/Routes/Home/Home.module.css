@@ -258,7 +258,7 @@
     flex-direction: column-reverse;
     margin-top: 15px;
     justify-content: center;
-    max-width: 500px;
+    max-width: 450px;
   }
 
   .profileImage {
@@ -276,6 +276,10 @@
   .statsContainer {
     flex-direction: column;
     align-items: center;
+  }
+
+  .servicesBackground h1 {
+    font-size: 1.5rem;
   }
 
   .servicesContainer {
