@@ -1,5 +1,5 @@
 .experience {
-  color: #fff;
+  color: var(--color-7);
   border-radius: 20px;
   border: 1px solid var(--color-4);
   padding: 25px;
@@ -21,11 +21,11 @@
   cursor: pointer;
 }
 
-.detalhes p:nth-child(1){
+.detalhes p:nth-child(1) {
   font-size: 1.125rem;
 }
 
-.detalhes p:nth-child(2){
+.detalhes p:nth-child(2) {
   font-size: 0.875rem;
 }
 
@@ -50,14 +50,34 @@
 
 .descricao.show {
   opacity: 1;
-  max-height: 1000px; 
+  max-height: 1000px;
 }
 
 .descricao p {
   margin-top: 30px;
+  color: var(--color-2);
 }
 
+/* Responsivo para tablets e celulares maiores */
+@media (max-width: 768px) {
+  .experience {
+    max-width: 500px;
+  }
 
+  .detalhes p:nth-child(1) {
+    font-size: 1.0625rem;
+  }
+
+  .detalhes p:nth-child(2) {
+    font-size: 0.8125rem;
+  }
+
+  .detalhes img {
+    max-width: 45px;
+  }
+}
+
+/* Responsivo para celulares pequenos */
 @media (max-width: 550px) {
   .experience {
     max-width: 400px;
@@ -67,12 +87,11 @@
     max-width: 220px;
   }
 
-  .detalhes p:nth-child(1){
+  .detalhes p:nth-child(1) {
     font-size: 1rem;
   }
 
   .experience + .experience {
     margin-top: 15px;
   }
-
 }

@@ -4,6 +4,8 @@
   align-items: center;
   height: 100vh;
   text-align: center;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .errorContent {
@@ -27,4 +29,33 @@
   font-size: 1.25rem;
   color: var(--color-2);
   margin-bottom: 30px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .errorCode {
+    font-size: 4.5rem;
+  }
+
+  .errorMessage {
+    font-size: 1.75rem;
+  }
+
+  .errorDescription {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .errorCode {
+    font-size: 3.5rem;
+  }
+
+  .errorMessage {
+    font-size: 1.5rem;
+  }
+
+  .errorDescription {
+    font-size: 1rem;
+  }
 }

@@ -34,7 +34,7 @@ const PortfolioModal = ({
           ></video>
         </div>
         <div className={styles.textContainer}>
-          <h2>{title}</h2>
+          <h1>{title}</h1>
           <p>{description}</p>
           <div className={styles.buttonsContainer}>
             <a

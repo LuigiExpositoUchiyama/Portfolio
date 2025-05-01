@@ -98,7 +98,9 @@ const Certificates = () => {
       <div>
         <div className={styles.certificados}>
           <div>
-            <h1>FIAP</h1>
+            <div className={styles.certificadoTitle}>
+              <h1>Faculdade FIAP</h1>
+            </div>
             <Slider {...settings}>
               {certificatesDataFIAP.map((certificate, index) => (
                 <div key={index}>
@@ -115,8 +117,9 @@ const Certificates = () => {
             </Slider>
           </div>
           <div>
-            <h1 className={styles.separacao}>Origamid</h1>
-
+            <div className={styles.certificadoTitle}>
+              <h1 className={styles.separacao}>Curso Origamid</h1>
+            </div>
             <Slider {...settings}>
               {certificatesDataOrigamid.map((certificate, index) => (
                 <div key={index}>

@@ -98,7 +98,6 @@
 }
 
 .sectionTitle {
-  position: relative;
   display: block;
   max-width: 1200px;
   margin: 0 auto;
@@ -109,8 +108,7 @@
 
 .sectionTitle h2 {
   font-size: 1.125rem;
-  font-weight: bold;
-  color: var(--color-2);
+  color: var(--color-7);
 }
 
 .sectionTitle::after {
@@ -123,6 +121,7 @@
   border-radius: 20px;
 }
 
+/* Responsivo para dispositivos até 1024px */
 @media (max-width: 1024px) {
   .portfolioContainer {
     grid-template-columns: repeat(2, 1fr);
@@ -138,6 +137,7 @@
   }
 }
 
+/* Responsivo para dispositivos até 768px */
 @media (max-width: 768px) {
   .portfolioContainer {
     grid-template-columns: 1fr;
@@ -151,7 +151,6 @@
   .sectionTitle {
     max-width: 500px;
   }
-
 
   .sectionTitle h2 {
     font-size: 1.1rem;

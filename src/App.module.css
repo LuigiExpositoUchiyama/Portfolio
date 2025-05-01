@@ -1,4 +1,3 @@
-/* Reset de margens e paddings */
 *,
 *::before,
 *::after {
@@ -8,7 +7,6 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-/* Fontes */
 @font-face {
   font-family: 'Font1'; 
   src: url('./fonts/TropiLand-L3MPg.ttf') format('truetype'); 
@@ -26,16 +24,16 @@
   src: url('./fonts/Poppins-Regular.ttf') format('truetype'); 
 }
 
-/* Definindo cores de forma centralizada */
 :root {
   --color-1: #212121;
-  --color-2: #dedede;
+  --color-2: #d3d3d3;
   --color-3: linear-gradient(to bottom right, #40C9FF, #E81CFF);
   --color-4: #E81CFF;
   --color-5: #40C9FF;
+  --color-6: #1d1d1d;
+  --color-7: #ffffff;
 }
 
-/* Body */
 body {
   background: var(--color-1);
   overflow-x: hidden;
@@ -55,18 +53,15 @@ body::-webkit-scrollbar-track {
   background: transparent;
 }
 
-/* Links */
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* Lista */
 ul {
   list-style: none;
 }
 
-/* Estilos para textos e títulos */
 h1, h2, h3, p, ul, li {
   margin: 0;
   padding: 0;
@@ -76,7 +71,6 @@ h1, h2, h3, p, ul, li {
   font-family: 'Font3';
 }
 
-/* Estilos para o título */
 .titulo h1 {
   font-family: 'Font3';
   font-size: 2rem; 
@@ -85,25 +79,35 @@ h1, h2, h3, p, ul, li {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 30px auto 15px;
+  margin: 3rem auto 1.5rem;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
-/* Media Queries */
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
   .titulo h1 {
     font-size: 2rem;
   }
 
   .icons {
-    max-width: 100px;
+    max-width: 10rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .titulo h1 {
+    font-size: 1.875rem;
+  }
+
+  .icons {
+    max-width: 8rem;
+    max-height: 8rem;
   }
 }
 
 @media (max-width: 550px) {
   .icons {
-    max-width: 75px;
-    max-height: 75px;
+    max-width: 7rem;
+    max-height: 7rem;
   }
 }

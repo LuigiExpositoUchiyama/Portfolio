@@ -4,7 +4,7 @@
   align-items: center;
   padding-top: 30px;
   flex-wrap: wrap;
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 0 auto;
 }
 
@@ -12,7 +12,7 @@
   display: flex;
   justify-content: center;
   text-align: center;
-  color: var(--color-2);
+  color: var(--color-7);
   font-family: 'Font4';
 }
 
@@ -28,23 +28,24 @@
   color: var(--color-4);
 }
 
-@media (max-width: 750px) {
+/* Responsivo: tablets / mobile grandes (até 768px) */
+@media (max-width: 768px) {
   .bgHeader .button {
     display: none;
-  } 
+  }
 
-  .header li + li{
+  .header li + li {
     margin-left: 60px;
   }
 }
 
-@media (max-width: 700px) {
+/* Responsivo: celulares (até 480px) */
+@media (max-width: 480px) {
   .header {
     display: block;
   }
 
   .header li + li {
-    margin: 15px 0px;
+    margin: 15px 0;
   }
 }
-

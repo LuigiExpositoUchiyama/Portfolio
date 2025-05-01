@@ -1,17 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { FaInstagram, FaWhatsapp, FaGithub, FaLinkedin } from 'react-icons/fa';
 
-/* ACESSIBILIDADE */
+import { HiOutlineDownload, HiArrowNarrowRight } from 'react-icons/hi';
+
+/* COMPONENTES */
 import Detalhes from '../../Components/Detalhes';
 import Button from '../../Components/Button';
 import TypingEffect from '../../Components/TypingEffect';
 
-/* ÍCONES DO REACT */
-import { FaInstagram, FaGithub, FaWhatsapp, FaLinkedin } from 'react-icons/fa';
-import { HiOutlineDownload } from 'react-icons/hi'; // Importando o ícone de download com contorno
-
 /* IMAGENS */
-import { ReactComponent as Perfil } from '../../Assets/Perfil.svg'; // Foto de perfil
+import { ReactComponent as Perfil } from '../../Assets/Perfil.svg';
+import { ReactComponent as Design } from '../../Assets/design.svg';
+import { ReactComponent as Manutencao } from '../../Assets/manutencao.svg';
+import { ReactComponent as Web } from '../../Assets/web.svg';
 
 /* CSS */
 import '../../App.module.css';
@@ -42,6 +43,27 @@ const socialLinks = [
     Icon: FaLinkedin,
     alt: 'LinkedIn',
     className: Social.containerFour,
+  },
+];
+
+const services = [
+  {
+    title: 'UI / UX Design',
+    icon: <Design className={styles.serviceIcon} />,
+    description:
+      'Criação de interfaces intuitivas, com foco na experiência do usuário e navegação eficiente, resultando em sites mais agradáveis e funcionais.',
+  },
+  {
+    title: 'Manutenção de Sites',
+    icon: <Manutencao className={styles.serviceIcon} />,
+    description:
+      'Atualizações frequentes, correções de erros, inclusão de novos conteúdos e suporte técnico para manter seu site sempre no ar.',
+  },
+  {
+    title: 'Web Design',
+    icon: <Web className={styles.serviceIcon} />,
+    description:
+      'Design moderno, alinhado à identidade visual da sua marca, garantindo um site visualmente atrativo e adaptado para todos os dispositivos.',
   },
 ];
 
@@ -78,7 +100,7 @@ const Home = () => {
                   className={`${Social.socialContainer} ${className}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={`Visite meu perfil no ${alt}`} // Acessibilidade
+                  aria-label={`Visite meu perfil no ${alt}`}
                 >
                   <Icon className={Social.socialSvg} />
                 </a>
@@ -93,30 +115,43 @@ const Home = () => {
 
       <Detalhes />
 
+      <div className={styles.servicesBackground}>
+        <div className={styles.servicesPrincipal}>
+          <div className={styles.servicesTitleArea}>
+            <div className={styles.servicesTitle}>
+              <h1>Meus Serviços</h1>
+            </div>
+            <a href="/portfolio">
+              <Button>
+                <div className={styles.projetosButton}>
+                  <span>Ver Projetos</span>
+                  <HiArrowNarrowRight className={styles.projetosIcon} />
+                </div>
+              </Button>
+            </a>
+          </div>
+
+          <div className={styles.servicesContainer}>
+            {services.map(({ title, icon, description }, index) => (
+              <div key={index} className={styles.serviceCard}>
+                <span>{icon}</span>
+                <h1>{title}</h1>
+                <p className={styles.serviceDescription}>{description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
       <div className={styles.statsBackground}>
         <h1>Minhas Conquistas</h1>
         <div className={styles.statsContainer}>
           {[
-            {
-              label: 'graduação',
-              value: '+1',
-            },
-            {
-              label: 'experiências',
-              value: '+4',
-            },
-            {
-              label: 'projetos',
-              value: '+10',
-            },
-            {
-              label: 'certificados',
-              value: '+10',
-            },
-            {
-              label: 'cursos',
-              value: '+12',
-            },
+            { label: 'graduação', value: '+1' },
+            { label: 'experiências', value: '+4' },
+            { label: 'projetos', value: '+10' },
+            { label: 'certificados', value: '+10' },
+            { label: 'cursos', value: '+12' },
           ].map(({ label, value }) => (
             <p key={label}>
               <span className={styles.statsNumber}>{value}</span>

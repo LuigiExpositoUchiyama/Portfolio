@@ -56,8 +56,15 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  color: var(--color-2);
 }
+
+.textContainer h1 {
+  color: var(--color-7);
+}
+
+.textContainer p {
+  color: var(--color-2);
+} 
 
 .buttonsContainer {
   margin-top: auto;
