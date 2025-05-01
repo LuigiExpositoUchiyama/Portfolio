@@ -101,21 +101,3 @@
     left: 25%;
   }
 }
-
-/* Responsivo: celulares (até 480px) */
-@media (max-width: 480px) {
-  .curriculo {
-    width: 100%;
-    max-width: 320px;
-    margin: 0 auto;
-  }
-
-  .curriculo p {
-    max-width: 100%;
-    padding: 0 10px;
-  }
-
-  .detalhes {
-    left: 20%;
-  }
-}
