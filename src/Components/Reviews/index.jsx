@@ -30,7 +30,7 @@ const DATA = [
     name: 'Michelle',
     role: 'Engenheira Civil',
     date: '2025-06-18',
-    rating: 4,
+    rating: 5,
     feedback:
       'O Luigi conseguiu traduzir minhas ideias técnicas em uma interface clara e funcional. A comunicação foi ótima durante todo o processo.',
   },
