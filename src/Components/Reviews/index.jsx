@@ -11,27 +11,28 @@ import styles from './Reviews.module.css';
 
 const DATA = [
   {
-    name: 'Carlos Almeida',
+    name: 'Miguel',
     role: 'Empresário',
-    date: '2025-07-12',
+    date: '2025-08-10',
     rating: 5,
     feedback:
-      'O Luigi foi incrível! Sempre atento aos detalhes e entregou tudo no prazo.',
+      'O site ficou incrível! Agora nossos clientes conseguem ver horários, serviços e localização de forma clara.',
   },
   {
-    name: 'Mariana Silva',
-    role: 'Fotógrafa',
-    date: '2025-06-02',
+    name: 'Thiago Pessoa',
+    role: 'Empresário',
+    date: '2025-07-25',
+    rating: 5,
+    feedback:
+      'O site ficou elegante e transmitiu confiança aos clientes. Recebemos elogios de quem acessou e sentimos aumento no contato de vendas.',
+  },
+  {
+    name: 'Michelle',
+    role: 'Engenheira Civil',
+    date: '2025-06-18',
     rating: 4,
     feedback:
-      'Site moderno e rápido, já trouxe mais clientes para o meu negócio.',
-  },
-  {
-    name: 'João Pereira',
-    role: 'Advogado',
-    date: '2025-04-19',
-    rating: 5,
-    feedback: 'Muito competente e comunicativo. Superou as expectativas.',
+      'O Luigi conseguiu traduzir minhas ideias técnicas em uma interface clara e funcional. A comunicação foi ótima durante todo o processo.',
   },
 ];
 

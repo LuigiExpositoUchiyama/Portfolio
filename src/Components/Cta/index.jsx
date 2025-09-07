@@ -6,13 +6,15 @@ import styles from './Cta.module.css';
 const CTA = () => {
   return (
     <section className={styles.ctaBox}>
-      <p className={styles.ctaTitle}>Vamos começar o seu projeto?</p>
+      <p className={styles.ctaTitle}>
+        Vamos transformar sua ideia em realidade?
+      </p>
       <p className={styles.ctaSub}>
-        Fale comigo e receba um plano e orçamento.
+        Entre em contato e comece seu projeto agora!
       </p>
       <Link to="/contact">
         <Button>
-          <span>Falar comigo</span>
+          <span>Entrar em contato</span>
         </Button>
       </Link>
     </section>
