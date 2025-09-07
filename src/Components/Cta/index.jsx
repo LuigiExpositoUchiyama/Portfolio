@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../../Components/Button';
-import styles from './CTA.module.css';
+import styles from './Cta.module.css';
 
 const CTA = () => {
   return (
