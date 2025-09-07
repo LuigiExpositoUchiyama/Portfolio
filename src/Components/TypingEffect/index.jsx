@@ -5,7 +5,7 @@ import styles from './TypingEffect.module.css';
 
 function TypingEffect() {
   const [typingText, setTypingText] = useState('');
-  const texto = 'Eae! Eu sou o Luigi Uchiyama.';
+  const texto = 'Sua ideia pode se tornar realidade digital.';
   const textoArray = texto.split('');
   const [index, setIndex] = useState(0);
 

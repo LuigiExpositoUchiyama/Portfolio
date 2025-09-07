@@ -1,11 +1,17 @@
 .bgHeader {
   display: flex;
-  justify-content: space-around;
   align-items: center;
   padding-top: 30px;
   flex-wrap: wrap;
-  max-width: 1500px;
+  max-width: var(--container-desktop);
   margin: 0 auto;
+  position: relative;
+}
+
+.bgHeader nav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .header {
@@ -14,6 +20,7 @@
   text-align: center;
   color: var(--color-7);
   font-family: 'Font4';
+  margin: 0;
 }
 
 .header li + li {
@@ -28,24 +35,36 @@
   color: var(--color-4);
 }
 
-/* Responsivo: tablets / mobile grandes (até 768px) */
-@media (max-width: 768px) {
-  .bgHeader .button {
-    display: none;
-  }
-
-  .header li + li {
-    margin-left: 60px;
+@media (max-width: 1400px) {
+  .bgHeader {
+    max-width: var(--container-laptop);
   }
 }
 
-/* Responsivo: celulares (até 480px) */
-@media (max-width: 480px) {
+@media (max-width: 1024px) {
+  .bgHeader {
+    max-width: var(--container-tablet);
+  }
+}
+
+@media (max-width: 768px) {
   .header {
     display: block;
+    margin-top: 10px;
   }
-
+  .bgHeader {
+    max-width: var(--container-mobile);
+    justify-content: space-between;
+  }
+  .bgHeader nav {
+    position: static;
+    transform: none;
+    margin-left: auto;
+  }
+  .bgHeader .button {
+    display: none;
+  }
   .header li + li {
-    margin: 15px 0;
+     margin: 15px 0 0 0;
   }
 }

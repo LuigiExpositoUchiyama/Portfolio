@@ -1,7 +1,8 @@
 import React from 'react';
-import Slider from 'react-slick';
+import CoverflowCarousel from '../../Components/CoverflowCarousel';
+import styles from './Certificates.module.css';
 
-/* IMAGENS */
+// IMAGENS
 import ResponsiveWebDevelopment from '/certifications/Responsive Web Development.png';
 import FormaçãoSocial from '/certifications/Formação Social e Sustentabilidade.png';
 import CSSFlexbox from '/certifications/CSS Flexbox.png';
@@ -13,13 +14,7 @@ import UIDesignAvançado from '/certifications/UI Design Avançado.png';
 import UIDesignparaIniciantes from '/certifications/UI Design para Iniciantes.png';
 import WordPressComoCMS from '/certifications/WordPress Como CMS.png';
 
-/* CSS */
-import geral from '../../App.module.css';
-import styles from './Certificates.module.css';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-
-const certificatesDataFIAP = [
+const FIAP = [
   {
     title: 'Responsive Web Development',
     link: 'https://on.fiap.com.br/pluginfile.php/1/local_nanocourses/certificado_nanocourse/82454/497adcb897eb85d68b668b9acb0a1847/certificado.png',
@@ -32,7 +27,7 @@ const certificatesDataFIAP = [
   },
 ];
 
-const certificatesDataOrigamid = [
+const ORIGAMID = [
   {
     title: 'CSS Flexbox',
     link: 'https://www.origamid.com/certificate/75a65166/',
@@ -75,70 +70,120 @@ const certificatesDataOrigamid = [
   },
 ];
 
-const Certificates = () => {
-  const settings = {
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    centerMode: true,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    swipe: true,
-    centerPadding: '30px',
-    arrows: false,
-  };
-
+export default function CertificatesSection() {
   return (
-    <section>
-      <div className={geral.titulo}>
-        <h1>Certificados</h1>
+    <section className={styles.certificatesSection}>
+      {/* FIAP */}
+      <div className={styles.certificatesContainer}>
+        <h2 className={`title ${styles.certificatesTitle}`}>Faculdade FIAP</h2>
       </div>
+      <CoverflowCarousel
+        items={FIAP}
+        autoplay
+        interval={3500}
+        ariaLabel="Certificados FIAP"
+        cardWidth={300}
+        imageHeight={170}
+        stageHeight={240}
+        spacing={70}
+        angle={14}
+        scaleStep={0.1}
+        minScale={0.7}
+        visibleRange={2}
+        navDistance={250}
+        navSize={28}
+        navFont={16}
+        navOpacity={1}
+        navHoverOpacity={1}
+        navAutoHide={true}
+        breakpoints={[
+          {
+            maxWidth: 1400,
+            overrides: {
+              cardWidth: 280,
+              imageHeight: 165,
+              stageHeight: 230,
+              spacing: 68,
+              navDistance: 220,
+            },
+          },
+          {
+            maxWidth: 1024,
+            overrides: {
+              visibleRange: 1,
+              navDistance: 180,
+              navAutoHide: false,
+            },
+          },
+          {
+            maxWidth: 768,
+            overrides: {
+              cardWidth: 220,
+              imageHeight: 140,
+              stageHeight: 240,
+              navDistance: 120,
+              visibleRange: 1,
+              navAutoHide: false,
+            },
+          },
+        ]}
+      />
 
-      <div>
-        <div className={styles.certificados}>
-          <div>
-            <div className={styles.certificadoTitle}>
-              <h1>Faculdade FIAP</h1>
-            </div>
-            <Slider {...settings}>
-              {certificatesDataFIAP.map((certificate, index) => (
-                <div key={index}>
-                  <a
-                    href={certificate.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img src={certificate.img} alt={certificate.title} />
-                    <p>{certificate.title}</p>
-                  </a>
-                </div>
-              ))}
-            </Slider>
-          </div>
-          <div>
-            <div className={styles.certificadoTitle}>
-              <h1 className={styles.separacao}>Curso Origamid</h1>
-            </div>
-            <Slider {...settings}>
-              {certificatesDataOrigamid.map((certificate, index) => (
-                <div key={index}>
-                  <a
-                    href={certificate.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img src={certificate.img} alt={certificate.title} />
-                    <p>{certificate.title}</p>
-                  </a>
-                </div>
-              ))}
-            </Slider>
-          </div>
-        </div>
+      {/* ORIGAMID */}
+      <div className={styles.certificatesContainer}>
+        <h2 className={`title ${styles.certificatesTitle}`}>Curso Origamid</h2>
       </div>
+      <CoverflowCarousel
+        items={ORIGAMID}
+        autoplay
+        interval={3500}
+        ariaLabel="Certificados Origamid"
+        cardWidth={300}
+        imageHeight={170}
+        stageHeight={240}
+        spacing={70}
+        angle={14}
+        scaleStep={0.1}
+        minScale={0.7}
+        visibleRange={2}
+        navDistance={450}
+        navSize={28}
+        navFont={16}
+        navOpacity={1}
+        navHoverOpacity={1}
+        navAutoHide={true}
+        breakpoints={[
+          {
+            maxWidth: 1400,
+            overrides: {
+              cardWidth: 280,
+              imageHeight: 165,
+              stageHeight: 230,
+              spacing: 68,
+              navDistance: 400,
+            },
+          },
+          {
+            maxWidth: 1024,
+            overrides: {
+              visibleRange: 1,
+              navDistance: 180,
+              navAutoHide: false,
+            },
+          },
+          {
+            maxWidth: 768,
+            overrides: {
+              cardWidth: 220,
+              imageHeight: 140,
+              stageHeight: 240,
+              navDistance: 120,
+              visibleRange: 1,
+              navAutoHide: false,
+            },
+          },
+        ]}
+      />
     </section>
   );
-};
-
-export default Certificates;
+}

@@ -1,112 +1,168 @@
-.education {
-  color: var(--color-7);
-  border-radius: 20px;
-  border: 1px solid var(--color-4);
-  padding: 25px;
-  max-width: 600px;
-  margin: 0 auto;
-  transition: max-height 0.5s ease-in-out;
-  box-sizing: border-box;
+.educationContainer {
+  max-width: 900px;
+  margin: 80px auto 0;
 }
 
-.education + .education {
-  margin-top: 30px;
+.sectionHeader {
+  margin-bottom: 20px;
+}
+
+.educationList {
+  display: grid;
+  gap: 18px;
+  margin-top: 60px;
+}
+
+.education {
+  background: var(--color-6);
+  border: 1px solid rgba(232,28,255,0.25); /* borda roxinha padrão */
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform .25s ease, box-shadow .3s ease, border-color .2s ease;
+}
+
+.education:hover,
+.education:has(.show),
+.education.expanded {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(232, 28, 255, 0.25);
+}
+
+.education:active {
+  transform: translateY(-2px);
 }
 
 .detalhes {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-  cursor: pointer;
-}
-
-.descricao {
-  opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out;
-}
-
-.descricao.show {
-  opacity: 1;
-  max-height: 1000px;
-}
-
-.descricao p {
-  margin-top: 30px;
-  color: var(--color-2);
-}
-
-.languages {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  margin-top: 30px;
-}
-
-.languagesTitle {
-  text-align: center;
-  margin-top: 30px;
-  color: var(--color-5);
-}
-
-.language {
-  display: flex;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  justify-content: center;
-  gap: 7px;
+  gap: 14px;
+  padding: 16px 18px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.detalhes:focus {
+  outline: none;
+}
+
+.detalhes:focus-visible {
+  box-shadow: 0 0 0 3px rgba(120, 86, 255, 0.25) inset;
+  border-radius: 12px;
+}
+
+.logo {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.schoolName {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--color-7);
 }
 
 .icon {
   width: 20px;
   height: 20px;
   color: var(--color-5);
-  border-radius: 5px;
+}
+
+.descricao {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity .35s ease, max-height .45s ease;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.show {
+  opacity: 1;
+  max-height: 1000px;
+}
+
+.descricaoInner {
+  padding: 18px;
+}
+
+.descricao p {
+  margin: 0 0 18px 0;
+  color: var(--color-2);
+  line-height: 1.7;
+  font-size: 0.97rem;
+}
+
+.languagesTitle {
+  text-align: center;
+  margin-top: 6px;
+  margin-bottom: 20px;
+  color: var(--color-5);
+  font-size: 1rem;
+}
+
+.languages {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  column-gap: 20px;
+  row-gap: 10px;
+  margin-top: 0;
+}
+
+.language {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: var(--color-2);
+  text-align: center;
 }
 
 .languageIcon {
-  font-size: 20px;
   display: flex;
   align-items: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
 }
 
-/* Ícones */
-.language.FaHtml5   { color: #e34f26; }
-.FaCss3Alt          { color: #1572b6; }
-.FaJsSquare         { color: #f7df1e; }
-.FaReact            { color: #61dafb; }
-.FaPython           { color: #306998; }
-.FaJava             { color: #007396; }
-.FaDatabase         { color: #4DB33D; }
-.FaServer           { color: #003B57; }
-.FaDocker           { color: #2496ED; }
-.FaGithub           { color: #fff; }
-.FaMicrosoft        { color: #0078D4; }
-.FaFigma            { color: #F24E1E; }
+.icon-html { color: #e34f26; }
+.icon-css  { color: #1572b6; }
+.icon-js   { color: #f7df1e; }
+.icon-react{ color: #61dafb; }
+.icon-python { color: #306998; }
+.icon-java { color: #007396; }
+.icon-mongodb { color: #4DB33D; }
+.icon-mariadb { color: #003B57; }
+.icon-docker { color: #2496ED; }
+.icon-github { color: #fff; }
+.icon-azure { color: #0078D4; }
+.icon-figma { color: #F24E1E; }
+.icon-wordpress { color: #21759b; }
 
-/* Tablet e celular */
+@media (prefers-reduced-motion: reduce) {
+  .education,
+  .descricao {
+    transition: none !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .educationContainer {
+    max-width: 700px;
+    margin-top: 60px;
+    padding: 0;
+  }
+}
+
 @media (max-width: 768px) {
-  .education {
-    max-width: 450px;
-  }
-
-  .languages {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  .educationContainer { max-width: 500px; }
+  .languages { grid-template-columns: repeat(2, 1fr); }
 }
 
-/* Celulares pequenos */
 @media (max-width: 480px) {
-  .education {
-    max-width: 350px;
-  }
-
-  .education + .education {
-    margin-top: 15px;
-  }
-
-  .languages {
-    grid-template-columns: 1fr;
-  }
+  .educationContainer { max-width: 350px; }
+  .languages { grid-template-columns: 1fr; }
 }

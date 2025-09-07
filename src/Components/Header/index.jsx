@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
-/* ACESSIBILIDADE */
 import Button from '../Button';
 
-/* CSS */
 import '../../App.module.css';
 import styles from './Header.module.css';
 import menu from './MenuMobile.module.css';
@@ -45,25 +43,30 @@ const Header = () => {
         >
           <ul className={styles.header} id="menu" role="menu">
             <li className={styles.menuItem}>
-              <NavLink
-                to="/"
-                onClick={closeMenu}
-                className={({ isActive }) => `${isActive ? styles.active : ''}`}
-                end
-              >
+              <a href="/#about" onClick={closeMenu}>
                 Sobre mim
-              </NavLink>
+              </a>
+            </li>
+            <li className={styles.menuItem}>
+              <a href="/#service" onClick={closeMenu}>
+                Serviços
+              </a>
             </li>
             <li className={styles.menuItem}>
               <NavLink
-                to="/portfolio"
+                to="/projects"
                 onClick={closeMenu}
                 className={({ isActive }) =>
                   `${styles.menuLink} ${isActive ? styles.active : ''}`
                 }
               >
-                Portfólio
+                Projetos
               </NavLink>
+            </li>
+            <li className={styles.menuItem}>
+              <a href="/#reviews" onClick={closeMenu}>
+                Avaliações
+              </a>
             </li>
             <li className={styles.menuItem}>
               <NavLink
@@ -78,10 +81,6 @@ const Header = () => {
             </li>
           </ul>
         </nav>
-
-        <NavLink to="/contact" className={styles.button}>
-          <Button>Me Contrate!</Button>
-        </NavLink>
       </header>
     </div>
   );

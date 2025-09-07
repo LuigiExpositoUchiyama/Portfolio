@@ -5,23 +5,24 @@
   padding: 0;
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
 }
 
 @font-face {
-  font-family: 'Font1'; 
-  src: url('./fonts/TropiLand-L3MPg.ttf') format('truetype'); 
+  font-family: 'Font1';
+  src: url('./fonts/TropiLand-L3MPg.ttf') format('truetype');
 }
 @font-face {
-  font-family: 'Font2'; 
-  src: url('./fonts/minagi-bristone.ttf') format('truetype'); 
+  font-family: 'Font2';
+  src: url('./fonts/minagi-bristone.ttf') format('truetype');
 }
 @font-face {
-  font-family: 'Font3'; 
-  src: url('./fonts/Poppins-Bold.ttf') format('truetype'); 
+  font-family: 'Font3';
+  src: url('./fonts/Poppins-Bold.ttf') format('truetype');
 }
 @font-face {
-  font-family: 'Font4'; 
-  src: url('./fonts/Poppins-Regular.ttf') format('truetype'); 
+  font-family: 'Font4';
+  src: url('./fonts/Poppins-Regular.ttf') format('truetype');
 }
 
 :root {
@@ -32,6 +33,14 @@
   --color-5: #40C9FF;
   --color-6: #1d1d1d;
   --color-7: #ffffff;
+  --color-8: #7d2ae8;
+}
+
+:root {
+  --container-desktop: 1400px; 
+  --container-laptop: 1200px;  
+  --container-tablet: 700px;  
+  --container-mobile: 500px;
 }
 
 body {
@@ -43,71 +52,48 @@ body {
 body::-webkit-scrollbar {
   width: 10px;
 }
-
 body::-webkit-scrollbar-thumb {
   background-color: #424242;
   border-radius: 5px;
 }
-
 body::-webkit-scrollbar-track {
   background: transparent;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+h1, h2, h3, p, ul, li { margin: 0; padding: 0; }
+
+.poppins-bold { font-family: 'Font3'; }
+
+:global(.title) {
+  color: var(--color-7);
+  font-size: 1.5rem;
+  position: relative;
+  margin-bottom: 10px;
+}
+:global(.title)::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100px;
+  height: 2px;
+  background-color: var(--color-4);
+  border-radius: 20px;
 }
 
-ul {
-  list-style: none;
-}
-
-h1, h2, h3, p, ul, li {
-  margin: 0;
-  padding: 0;
-}
-
-.poppins-bold {
-  font-family: 'Font3';
-}
-
-.titulo h1 {
-  font-family: 'Font3';
-  font-size: 2rem; 
-  color: var(--color-5);
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 3rem auto 1.5rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
 
 @media (max-width: 1024px) {
-  .titulo h1 {
-    font-size: 2rem;
-  }
-
-  .icons {
-    max-width: 10rem;
-  }
+  :global(.title) { font-size: 1.5rem; }
+  .icons { max-width: 10rem; }
 }
 
 @media (max-width: 768px) {
-  .titulo h1 {
-    font-size: 1.875rem;
-  }
-
-  .icons {
-    max-width: 8rem;
-    max-height: 8rem;
-  }
+  .icons { max-width: 8rem; max-height: 8rem; }
 }
 
 @media (max-width: 550px) {
-  .icons {
-    max-width: 7rem;
-    max-height: 7rem;
-  }
+  .icons { max-width: 7rem; max-height: 7rem; }
 }

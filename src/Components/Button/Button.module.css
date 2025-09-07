@@ -1,6 +1,6 @@
 .button {
   position: relative;
-  padding: 12px 22px;
+  padding: 12px 20px;
   border-radius: 6px;
   border: none;
   color: var(--color-7);
@@ -10,10 +10,15 @@
   font-family: 'Font4';
   font-size: 1rem;
   z-index: 1;
+  box-shadow: 0 6px 16px rgba(232, 28, 255, 0.25);
 }
 
 .button:active {
   transform: scale(0.96);
+}
+
+.button:hover {
+  filter: brightness(0.9);
 }
 
 .button:before,
@@ -26,6 +31,7 @@
   transform: translateX(-50%);
   z-index: -1000;
   background-repeat: no-repeat;
+  pointer-events: none; 
 }
 
 .button:hover:before {

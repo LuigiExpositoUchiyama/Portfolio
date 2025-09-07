@@ -1,0 +1,130 @@
+.coverflow {
+  position: relative;
+  max-width: var(--container-desktop);
+  margin: 0 auto;
+  padding: 16px 12px 20px;
+  perspective: 1200px;
+  outline: none;
+}
+
+.stage {
+  position: relative;
+  display: grid;
+  place-items: center;
+  transform-style: preserve-3d;
+  height: var(--cf-stage-height);
+}
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 92%;
+  transform-origin: center center;
+  translate: -50% -50%;
+  background: var(--color-6);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 14px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+  text-decoration: none;
+  transition:
+    transform .45s cubic-bezier(.2,.8,.2,1),
+    opacity .35s ease,
+    filter .35s ease,
+    border-color .25s ease;
+  overflow: hidden;
+}
+.card:hover {
+  border-color: rgba(232,28,255,0.25);
+  filter: brightness(1.03);
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  height: var(--cf-img-height);
+  object-fit: cover;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.caption {
+  text-align: center;
+  color: var(--color-5);
+  font-size: .9rem;
+  padding: 8px 10px 10px;
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  width: var(--cf-nav-size);
+  height: var(--cf-nav-size);
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.06);
+  color: var(--color-7);
+  font-size: var(--cf-nav-font);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  z-index: 5;
+  transition: background .2s ease, border-color .2s ease, transform .15s ease, opacity .2s ease;
+  backdrop-filter: blur(6px);
+  opacity: var(--cf-nav-opacity);
+}
+.nav:hover {
+  background: rgba(255,255,255,0.10);
+  border-color: var(--color-4);
+  transform: translateY(-1px);
+  opacity: var(--cf-nav-opacity-hover);
+}
+
+.prev { left: calc(50% - var(--cf-card-width) / 2 - var(--cf-nav-distance)); }
+.next { right: calc(50% - var(--cf-card-width) / 2 - var(--cf-nav-distance)); }
+
+.navAutoHide .nav { opacity: 0; pointer-events: none; }
+.navAutoHide:hover .nav,
+.navAutoHide:focus-within .nav {
+  opacity: var(--cf-nav-opacity);
+  pointer-events: auto;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.22);
+  border: 1px solid rgba(255,255,255,0.18);
+  cursor: pointer;
+  transition: transform .15s ease, background .2s ease, border-color .2s ease;
+}
+.dot:hover {
+  transform: scale(1.1);
+  background: rgba(255,255,255,0.32);
+  border-color: var(--color-4);
+}
+.dotActive {
+  background: var(--color-4);
+  border-color: var(--color-4);
+}
+
+@media (max-width: 1024px) {
+  .coverflow { max-width: var(--container-tablet); }
+}
+@media (max-width: 768px) {
+  .coverflow {
+    max-width: var(--container-mobile);
+    --cf-stage-height: 210px;
+    --cf-img-height: 150px;
+    --cf-nav-size: 26px;
+    --cf-nav-font: 15px;
+    --cf-nav-distance: 8px;
+  }
+}

@@ -4,8 +4,8 @@ import geral from '../../App.module.css';
 import styles from './Experience.module.css';
 
 /* Imagens */
-import TeleperformanceImg from '/icons/Teleperformance.png';
-import ThiagoPessoaJoiasImg from '/icons/ThiagoPessoaJoias.png';
+import TeleperformanceImg from '/logos/Teleperformance.png';
+import ThiagoPessoaJoiasImg from '/logos/ThiagoPessoaJoias.png';
 import VAImg from '../../Assets/VA.svg';
 
 const Experiences = () => {
@@ -154,12 +154,12 @@ const Experiences = () => {
   ];
 
   return (
-    <section>
-      <div className={geral.titulo}>
-        <h1>Experiências</h1>
-      </div>
+    <section className={styles.experienceContainer}>
+      <header className={styles.sectionHeader}>
+        <h1 className="title">Experiências</h1>
+      </header>
 
-      <div>
+      <div className={styles.experienceList}>
         {experiencesData.map((exp, index) => (
           <ExperienceItem
             key={index}

@@ -1,0 +1,144 @@
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modalContainer {
+  background: var(--color-6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  width: min(1200px, 92vw);
+  max-height: 90vh;
+  overflow: hidden;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 24px;
+  padding: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.closeButton {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  background: transparent;
+  color: var(--color-7);
+  border: 0;
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.media {
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  min-height: 340px;
+}
+
+.mediaContent {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.details {
+  display: grid;
+  align-content: center;
+  gap: 12px;
+  color: var(--color-2);
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-2);
+}
+
+.techList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;  
+  margin-top: 6px;
+}
+
+.techPill {
+  padding: 8px 12px; 
+  font-size: 0.85rem;
+  color: var(--color-7);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+}
+
+
+.actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.button {
+  padding: 12px 16px;
+  height: 44px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.buttonPrimary {
+  background: var(--color-8);
+  color: var(--color-7);
+  border: 1px solid var(--color-8);
+  box-shadow: 0 6px 16px rgba(232, 28, 255, 0.25);
+}
+
+.buttonGhost {
+  background: transparent;
+  color: var(--color-2);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+@media (max-width: 1024px) {
+  .modalContainer {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    width: min(768px, 92vw);
+    padding: 18px;
+  }
+
+  .media {
+    min-height: 280px;
+  }
+
+  .details {
+    align-content: start;
+  }
+}
+
+@media (max-width: 768px) {
+  .modalContainer {
+    width: min(520px, 94vw);
+    padding: 16px;
+  }
+
+  .media {
+    min-height: 200px;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+}
