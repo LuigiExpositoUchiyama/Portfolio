@@ -2,6 +2,10 @@
   max-width: var(--container-desktop);
   margin: 0 auto;
   padding-top: 120px;
+  overflow-x: clip; /* garante que nada estoure */
+}
+@supports not (overflow: clip) {
+  .reviewsContainer { overflow-x: hidden; }
 }
 
 .card {
@@ -104,11 +108,21 @@
 .carouselViewport {
   position: relative;
   padding: 40px 40px 20px 40px;
+  overflow-x: clip;   /* corta transbordo */
+  overflow-y: visible;
+}
+@supports not (overflow: clip) {
+  .carouselViewport { overflow-x: hidden; }
 }
 
 .carouselStage {
   position: relative;
   perspective: 1000px;
+  overflow: clip;     /* evita scroll horizontal */
+  contain: paint;     /* isola sombras/blur */
+}
+@supports not (overflow: clip) {
+  .carouselStage { overflow: hidden; }
 }
 
 .carouselLane {
@@ -116,6 +130,11 @@
   height: 320px;
   transform-style: preserve-3d;
   pointer-events: none;
+  overflow: clip;     /* garante corte */
+  contain: paint;
+}
+@supports not (overflow: clip) {
+  .carouselLane { overflow: hidden; }
 }
 
 .carouselCardWrap {
@@ -129,7 +148,7 @@
   transform: translateX(var(--x, 0px)) translateZ(var(--z, 0.001px)) scale(var(--scale, 1));
   opacity: var(--opacity, 1);
   z-index: var(--zIndex, 1);
-  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, .22));
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, .22)); /* sombra contida */
   transition:
     transform .42s cubic-bezier(.2, .7, .2, 1),
     opacity .26s ease,
@@ -240,9 +259,8 @@
   }
 
   .dots {
-  margin-top: 60px;
-}
-
+    margin-top: 60px;
+  }
 
   .navPrev { display: none; }
   .navNext { display: none; }
