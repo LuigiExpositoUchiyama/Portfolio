@@ -40,7 +40,7 @@
   --container-desktop: 1400px; 
   --container-laptop: 1200px;  
   --container-tablet: 700px;  
-  --container-mobile: 500px;
+  --container-mobile: 340px;
 }
 
 body {

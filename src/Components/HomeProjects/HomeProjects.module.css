@@ -192,7 +192,7 @@
 }
 
 @media (max-width: 768px) {
-  .projectsHomeContainer { max-width: var(--container-mobile); }
+  .projectsHomeContainer { max-width: var(--container-mobile); padding-top: 45px; }
   .projectsIntro p:first-child { font-size: 1rem; }
   .projectsIntro p:last-child { font-size: .875rem; }
   .grid { grid-template-columns: 1fr; }

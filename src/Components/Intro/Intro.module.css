@@ -74,7 +74,9 @@
 }
 
 @media (max-width: 768px) {
-  .introContainer { max-width: var(--container-mobile); }
-  .socialLinks { margin-top: 0px; }
-  .introImg { width: 500px; }
+  .introContainer { max-width: var(--container-mobile); ;}
+  .socialLinks {flex-wrap: wrap;}
+  .socialLinkButton {order: 2;}
+  .introImg { width: 340px; margin-bottom: 15px;}
+  .introImageContainer {order: -1;}
 }

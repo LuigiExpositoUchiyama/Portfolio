@@ -63,28 +63,43 @@ function signedDistance(i, center, n) {
   return d;
 }
 
-/** hook simples para contar quantos cards mostrar (5 desktop, 3 tablet) */
+/** hook simples para contar quantos cards mostrar (5 desktop, 3 tablet, 1 mobile) */
 function useVisibleCount() {
-  const [count, setCount] = useState(() =>
-    typeof window !== 'undefined' &&
-    window.matchMedia('(max-width: 1024px)').matches
-      ? 3
-      : 5,
-  );
+  const getCount = () => {
+    if (typeof window === 'undefined') return 5;
+    const mqMobile = window.matchMedia('(max-width: 768px)');
+    const mqTablet = window.matchMedia('(max-width: 1024px)');
+    if (mqMobile.matches) return 1; // <= 768px → 1 avaliação
+    if (mqTablet.matches) return 3; // 769–1024px → 3 avaliações
+    return 5; // > 1024px → 5 avaliações
+  };
+
+  const [count, setCount] = useState(getCount);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
-    const mq = window.matchMedia('(max-width: 1024px)');
-    const onChange = () => setCount(mq.matches ? 3 : 5);
+    const mqMobile = window.matchMedia('(max-width: 768px)');
+    const mqTablet = window.matchMedia('(max-width: 1024px)');
 
-    if (mq.addEventListener) mq.addEventListener('change', onChange);
-    else mq.addListener(onChange);
+    const onChange = () => setCount(getCount());
+
+    if (mqMobile.addEventListener) {
+      mqMobile.addEventListener('change', onChange);
+      mqTablet.addEventListener('change', onChange);
+    } else {
+      mqMobile.addListener(onChange);
+      mqTablet.addListener(onChange);
+    }
 
     onChange();
-
     return () => {
-      if (mq.removeEventListener) mq.removeEventListener('change', onChange);
-      else mq.removeListener(onChange);
+      if (mqMobile.removeEventListener) {
+        mqMobile.removeEventListener('change', onChange);
+        mqTablet.removeEventListener('change', onChange);
+      } else {
+        mqMobile.removeListener(onChange);
+        mqTablet.removeListener(onChange);
+      }
     };
   }, []);
 
@@ -142,7 +157,7 @@ export default function Reviews({
   const len = items.length;
   const [index, setIndex] = useState(0);
   const hovering = useRef(false);
-  const visibleCount = useVisibleCount(); // 5 desktop, 3 tablet
+  const visibleCount = useVisibleCount(); // 5 desktop, 3 tablet, 1 mobile
   const { gap: gapUse, depth: depthUse } = useResponsive3D(gap, depth);
 
   const next = useCallback(
@@ -185,13 +200,16 @@ export default function Reviews({
     // quantos efetivamente mostrar (se tiver poucos itens, mostra todos)
     const show = Math.min(visibleCount, len);
 
+    // --- manter buffer de vizinhos quando show === 1 (para transição lateral)
+    const needBuffer = show === 1 && len > 1;
+    const renderHalf = needBuffer ? 1 : Math.floor((show - 1) / 2);
+
     // índices a renderizar:
     let indices = [];
-    if (len <= show) {
+    if (len <= show && !needBuffer) {
       indices = Array.from({ length: len }, (_, k) => k);
     } else {
-      const half = Math.floor((show - 1) / 2);
-      for (let off = -half; off <= half; off++) {
+      for (let off = -renderHalf; off <= renderHalf; off++) {
         indices.push((index + off + len) % len);
       }
     }
@@ -209,23 +227,26 @@ export default function Reviews({
           : -Math.round(depthUse * (0.9 + (abs - 1) * 0.6));
       const scale = abs === 1 ? 0.9 : Math.max(0.8, 0.9 - (abs - 1) * 0.1);
       const blur = abs === 1 ? 0.4 : Math.min(1.2, 0.4 + (abs - 1) * 0.4);
-      const opacity = Math.max(0.42, fadeSide - Math.max(0, abs - 1) * 0.2);
+      const sideOpacity = Math.max(0.42, fadeSide - Math.max(0, abs - 1) * 0.2);
       const zIndex = 40 - abs;
       const blurFalloff = Math.max(14, 26 - abs * 6);
       const shadowAlpha = Math.max(0, 0.35 - abs * 0.06);
+
+      // se estamos no modo "1 visível", escondemos totalmente os vizinhos
+      const isHidden = needBuffer && abs >= 1;
 
       const vars = {
         '--x': `${x}px`,
         '--z': `${z}px`,
         '--scale': isActive ? '1' : `${scale}`,
-        '--opacity': isActive ? '1' : `${opacity}`,
+        '--opacity': isActive ? '1' : isHidden ? '0' : `${sideOpacity}`,
         '--zIndex': isActive ? '100' : `${zIndex}`,
         '--blur': isActive ? '0px' : `${blur}px`,
         '--shadowBlur': `${blurFalloff}px`,
         '--shadowAlpha': `${shadowAlpha}`,
       };
 
-      return { r, i, d, isActive, vars };
+      return { r, i, d, isActive, isHidden, vars };
     });
   }, [items, len, index, gapUse, depthUse, fadeSide, visibleCount]);
 
@@ -260,11 +281,11 @@ export default function Reviews({
 
         <div className={styles.carouselStage}>
           <div className={styles.carouselLane}>
-            {slides.map(({ r, i, d, isActive, vars }) => (
+            {slides.map(({ r, i, d, isActive, isHidden, vars }) => (
               <div
                 key={`${r.name}-${i}`}
                 className={styles.carouselCardWrap}
-                style={vars}
+                style={{ ...vars, pointerEvents: isHidden ? 'none' : 'auto' }}
                 data-active={isActive ? 'true' : 'false'}
                 onClick={() => d !== 0 && setIndex(i)}
                 aria-hidden={isActive ? 'false' : 'true'}

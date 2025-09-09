@@ -220,7 +220,6 @@
     max-width: var(--container-tablet);
     padding-top: 60px;
   }
-  
   .navPrev { left: 50px; }
   .navNext { right: 50px; }
 }
@@ -231,19 +230,22 @@
     max-width: var(--container-mobile);
   }
 
+  .carouselViewport {
+    position: relative;
+    padding-top: 90px;
+  }
+  
   .card {
-    width: 290px;
+    width: 320px;
   }
 
-  .navPrev { left: 20px; }
-  .navNext { right: 20px; }
+  .dots {
+  margin-top: 60px;
 }
 
-/* ---------- Telas estreitas ---------- */
-@media (max-width: 550px) {
-  .navPrev { left: 50px; }
-  .navNext { right: 50px; }
-  .carouselLane { height: 270px; }
+
+  .navPrev { display: none; }
+  .navNext { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {

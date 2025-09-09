@@ -59,6 +59,6 @@
 }
 
 @media (max-width: 768px) {
-  .servicesContainer { max-width: var(--container-mobile);  padding-top: 60px;}
+  .servicesContainer { max-width: var(--container-mobile);  padding-top: 45px;}
   .servicesRow { grid-template-columns: 1fr; }
 }

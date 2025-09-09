@@ -89,13 +89,3 @@
   }
 }
 
-/* Ajuste adicional para telas menores */
-@media (max-width: 480px) {
-  .menuFechado {
-    top: 100px;
-  }
-
-  .menuAberto {
-    height: 120px;
-  }
-}

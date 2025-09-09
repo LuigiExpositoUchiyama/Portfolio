@@ -129,7 +129,7 @@
 }
 
 @media (max-width: 768px) {
-  .aboutContainer { max-width: var(--container-mobile); padding-top: 60px;}
+  .aboutContainer { max-width: var(--container-mobile); padding-top: 45px;}
   .perfilImg { width: 360px; }
   .achievements { justify-content: center; gap: 30px; margin-top: 40px; }
   .achievementNumber { font-size: 2.5rem; }
