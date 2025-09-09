@@ -2,10 +2,6 @@
   max-width: var(--container-desktop);
   margin: 0 auto;
   padding-top: 120px;
-  overflow-x: clip; /* garante que nada estoure */
-}
-@supports not (overflow: clip) {
-  .reviewsContainer { overflow-x: hidden; }
 }
 
 .card {
@@ -108,21 +104,11 @@
 .carouselViewport {
   position: relative;
   padding: 40px 40px 20px 40px;
-  overflow-x: clip;   /* corta transbordo */
-  overflow-y: visible;
-}
-@supports not (overflow: clip) {
-  .carouselViewport { overflow-x: hidden; }
 }
 
 .carouselStage {
   position: relative;
   perspective: 1000px;
-  overflow: clip;     /* evita scroll horizontal */
-  contain: paint;     /* isola sombras/blur */
-}
-@supports not (overflow: clip) {
-  .carouselStage { overflow: hidden; }
 }
 
 .carouselLane {
@@ -130,11 +116,6 @@
   height: 320px;
   transform-style: preserve-3d;
   pointer-events: none;
-  overflow: clip;     /* garante corte */
-  contain: paint;
-}
-@supports not (overflow: clip) {
-  .carouselLane { overflow: hidden; }
 }
 
 .carouselCardWrap {
@@ -148,7 +129,7 @@
   transform: translateX(var(--x, 0px)) translateZ(var(--z, 0.001px)) scale(var(--scale, 1));
   opacity: var(--opacity, 1);
   z-index: var(--zIndex, 1);
-  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, .22)); /* sombra contida */
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, .22));
   transition:
     transform .42s cubic-bezier(.2, .7, .2, 1),
     opacity .26s ease,
@@ -239,6 +220,7 @@
     max-width: var(--container-tablet);
     padding-top: 60px;
   }
+  
   .navPrev { left: 50px; }
   .navNext { right: 50px; }
 }
@@ -249,21 +231,49 @@
     max-width: var(--container-mobile);
   }
 
-  .carouselViewport {
-    position: relative;
-    padding-top: 90px;
-  }
-  
   .card {
-    max-width: 320px;
+    width: min(290px, 86vw);
+    padding: 28px 14px;
   }
 
-  .dots {
-    margin-top: 60px;
+  .name { font-size: .95rem; }
+  .role { font-size: .8rem; }
+  .feedbackWithQuotes { padding: 8px 14px; }
+  .date { font-size: .85rem; }
+
+  .stars { padding: 16px 0 8px 0; gap: 5px; }
+  .star { width: 16px; height: 16px; }
+
+  .carouselViewport {
+    padding: 60px 16px 14px 16px;
   }
 
+  .carouselLane { height: 300px; }
+
+  .navButton {
+    width: 34px;
+    height: 34px;
+    font-size: 20px;
+    top: auto;
+    bottom: 6px;
+    transform: none;
+    background: rgba(120,120,120,.16);
+  }
   .navPrev { display: none; }
   .navNext { display: none; }
+
+  .dots { margin-top: 45px; }
+}
+
+/* ---------- Telas estreitas ---------- */
+@media (max-width: 550px) {
+  .carouselLane { height: 270px; }
+}
+
+@media (max-width: 420px) {
+  .card { width: min(290px, 92vw); }
+  .carouselLane { height: 290px; }
+  .navButton { bottom: 4px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
