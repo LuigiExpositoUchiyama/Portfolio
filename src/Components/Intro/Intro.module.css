@@ -77,6 +77,6 @@
   .introContainer { max-width: var(--container-mobile); ;}
   .socialLinks {flex-wrap: wrap;}
   .socialLinkButton {order: 2;}
-  .introImg { width: 340px; margin-bottom: 15px;}
+  .introImg { max-width: 340px; margin-bottom: 15px;}
   .introImageContainer {order: -1;}
 }

@@ -6,6 +6,7 @@
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 @font-face {
@@ -45,7 +46,6 @@
 
 body {
   background: var(--color-1);
-  overflow-x: hidden;
   font-family: 'Font4', sans-serif;
 }
 
