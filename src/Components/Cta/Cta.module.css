@@ -1,7 +1,7 @@
 .ctaBox {
   text-align: center;
   margin: 0 auto;
-  max-width: 800px;
+  max-width: var(--container-desktop);
   padding-top: 90px;
 }
 
@@ -23,5 +23,11 @@
 @media (max-width: 1024px) {
   .ctaBox {
     padding-top: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ctaBox {
+    max-width: var(--container-mobile);
   }
 }
