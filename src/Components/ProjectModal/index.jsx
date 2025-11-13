@@ -81,7 +81,7 @@ const ProjectModal = ({
                 rel="noopener noreferrer"
                 className={`${styles.button} ${styles.buttonPrimary}`}
               >
-                Ver demo
+                Acessar site
               </a>
             )}
             {repoLink && (
@@ -91,7 +91,7 @@ const ProjectModal = ({
                 rel="noopener noreferrer"
                 className={`${styles.button} ${styles.buttonGhost}`}
               >
-                Código
+                Ver Código
               </a>
             )}
           </div>

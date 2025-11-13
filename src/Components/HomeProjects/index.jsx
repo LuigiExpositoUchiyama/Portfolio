@@ -23,6 +23,20 @@ const HomeProjects = () => {
   const projects = useMemo(
     () => [
       {
+        title: 'Dra. Victoria Picolo',
+        description:
+          'Site elegante para clínica estética, destacando tratamentos, resultados e contato profissional.',
+        detailedDescription:
+          'Desenvolvido para a Dra. Victoria Picolo, biomédica esteta, este site reflete sofisticação e confiança. Apresenta os principais tratamentos, resultados e formas de contato, transmitindo credibilidade e reforçando a presença digital da profissional na área da estética.',
+        imageSource: '/img/DraVictoriaPicolo.png',
+        videoSource: '/video/DraVictoriaPicolo.mp4',
+        projectLink: 'https://dra-victoria-picolo.vercel.app',
+        repoLink: '',
+        category: 'cliente',
+        year: 2025,
+        stack: ['React', 'Vite', 'CSS Modules'],
+      },
+      {
         title: 'Lavagem Aquarius',
         description:
           'Site moderno para lava-rápido, destacando serviços, horário e localização.',
@@ -49,20 +63,6 @@ const HomeProjects = () => {
         category: 'estudo',
         year: 2024,
         stack: ['React', 'Vite', 'API', 'CSS Modules'],
-      },
-      {
-        title: 'Haven Tranquility',
-        description:
-          'Site acadêmico para saúde mental, com perfis personalizados e base de dados de estudos.',
-        detailedDescription:
-          'Este projeto acadêmico foi desenvolvido com Next.js, Java e banco de dados, com foco em saúde mental. Permite criar perfis de usuários e acompanhar uma base de dados personalizada de estudos, oferecendo recursos digitais que apoiam o bem-estar e facilitam a gestão de informações de forma organizada e segura.',
-        imageSource: '/img/havenTranquility.png',
-        videoSource: '/video/Haven Tranquility.mp4',
-        projectLink: 'https://haven-tranquility.vercel.app',
-        repoLink: 'https://github.com/LuigiExpositoUchiyama/Haven-Tranquility',
-        category: 'estudo',
-        year: 2024,
-        stack: ['Next.js', 'Java', 'DB'],
       },
     ],
     [],

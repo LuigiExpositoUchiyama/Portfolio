@@ -25,6 +25,20 @@ const Projects = () => {
   const projects = useMemo(
     () => [
       {
+        title: 'Dra. Victoria Picolo',
+        description:
+          'Site elegante para clínica estética, destacando tratamentos, resultados e contato profissional.',
+        detailedDescription:
+          'Desenvolvido para a Dra. Victoria Picolo, biomédica esteta, este site reflete sofisticação e confiança. Apresenta os principais tratamentos, resultados e formas de contato, transmitindo credibilidade e reforçando a presença digital da profissional na área da estética.',
+        imageSource: '/img/DraVictoriaPicolo.png',
+        videoSource: '/video/DraVictoriaPicolo.mp4',
+        projectLink: 'https://dra-victoria-picolo.vercel.app',
+        repoLink: '',
+        category: 'cliente',
+        year: 2025,
+        stack: ['React', 'Vite', 'CSS Modules'],
+      },
+      {
         title: 'Lavagem Aquarius',
         description:
           'Site moderno para lava-rápido, destacando serviços, horário e localização.',
