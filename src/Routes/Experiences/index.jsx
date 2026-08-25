@@ -1,5 +1,5 @@
 import React from 'react';
-import ExperienceItem from '../../Components/ExperienceItem';
+import ExperienceItem from '../../Components/Experiences/ExperienceItem';
 import geral from '../../App.module.css';
 import styles from './Experience.module.css';
 

@@ -1,0 +1,33 @@
+.ctaBox {
+  text-align: center;
+  margin: 0 auto;
+  max-width: var(--container-desktop);
+  padding-top: 90px;
+}
+
+.ctaTitle {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--color-5);
+  margin-bottom: 8px;
+}
+
+.ctaSub {
+  font-size: 1rem;
+  color: var(--color-2);
+  opacity: 0.85;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+@media (max-width: 1024px) {
+  .ctaBox {
+    padding-top: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ctaBox {
+    max-width: var(--container-mobile);
+  }
+}

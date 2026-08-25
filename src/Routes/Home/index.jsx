@@ -1,10 +1,10 @@
 import React from 'react';
-import Intro from '../../Components/Intro';
-import About from '../../Components/About';
-import HomeProjects from '../../Components/HomeProjects';
-import Services from '../../Components/Services';
-import Reviews from '../../Components/Reviews';
-import CTA from '../../Components/Cta';
+import Intro from '../../Components/Home/Intro';
+import About from '../../Components/Home/About';
+import HomeProjects from '../../Components/Home/HomeProjects';
+import Services from '../../Components/Home/Services';
+import Reviews from '../../Components/Home/Reviews';
+import CTA from '../../Components/Home/Cta';
 
 const Home = () => {
   return (

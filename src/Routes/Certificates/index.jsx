@@ -1,5 +1,5 @@
 import React from 'react';
-import CoverflowCarousel from '../../Components/CoverflowCarousel';
+import CoverflowCarousel from '../../Components/Certificates/CoverflowCarousel';
 import styles from './Certificates.module.css';
 
 // IMAGENS

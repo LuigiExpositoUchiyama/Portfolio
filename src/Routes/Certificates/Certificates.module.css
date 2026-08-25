@@ -1,5 +1,8 @@
 .certificatesSection {
-  padding-top: 60px;
+  padding: 72px 0 90px;
+  background:
+    radial-gradient(circle at 50% 18%, rgba(64, 201, 255, 0.035), transparent 28%),
+    var(--color-1);
 }
 
 .certificatesContainer {
@@ -9,8 +12,13 @@
 }
 
 .certificatesTitle {
-  margin: 0 0 10px;
+  margin: 0 0 16px;
+  font-family: 'Font3', sans-serif;
   white-space: nowrap;
+}
+
+.certificatesContainer:not(:first-child) {
+  margin-top: 54px;
 }
 
 @media (max-width: 1400px) {
@@ -31,6 +39,6 @@
   }
 
   .certificatesSection {
-    padding-top: 45px;
+    padding: 48px 0 64px;
   }
 }
