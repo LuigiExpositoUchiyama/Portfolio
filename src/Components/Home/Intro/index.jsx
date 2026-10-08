@@ -1,8 +1,7 @@
 import React from 'react';
 import { FaInstagram, FaGithub, FaEnvelope, FaLinkedin } from 'react-icons/fa';
 import Button from '../../Button';
-import TypingEffect from '../TypingEffect';
-import introImg from '/icons/img.png';
+import projects from '../../../Data/projects';
 import styles from './Intro.module.css';
 import Social from '../../../Styles/RedesSociais.module.css';
 
@@ -34,32 +33,27 @@ const socialLinks = [
 ];
 
 const Intro = () => {
+  const desktopProject = projects.find(project => project.title.startsWith('Intermarine - Portal'));
+  const mobileProject = projects.find(project => project.title === 'Lavagem Aquarius');
   return (
     <div className={styles.introContainer}>
       <div className={styles.introGrid}>
         <div className={styles.introText}>
-          <TypingEffect />
-          <p>
-            Já pensou em ter uma solução digital que realmente valorize o seu
-            trabalho? Meu propósito é transformar ideias em projetos práticos e
-            criativos, ajudando você ou sua empresa a conquistar mais espaço e
-            resultados no mundo online.
-          </p>
+          <span className={styles.eyebrow}>DESENVOLVIMENTO WEB SOB MEDIDA</span>
+          <h1>Sites e sistemas feitos para o <span>seu negócio.</span></h1>
+          <p>Desenvolvo sites profissionais e sistemas personalizados para apresentar sua empresa, organizar processos e facilitar o dia a dia.</p>
           <div className={styles.socialLinks}>
-            <a
+            <div className={styles.contactAction}>
+            <Button
               href="https://wa.me/5511957047874"
-              className={styles.socialLinkButton}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button>
-                <div className={styles.contactButton}>
-                  <span>Entre em Contato</span>
-                </div>
-              </Button>
-            </a>
+              <span className={styles.contactButtonContent}>Vamos conversar sobre seu projeto</span>
+            </Button>
+            </div>
 
-            <div className={Social.card}>
+            <div className={`${Social.card} ${styles.socialIcons}`}>
               {socialLinks.map(({ href, Icon, alt, className }, index) => (
                 <a
                   key={index}
@@ -77,12 +71,18 @@ const Intro = () => {
         </div>
 
         <div className={styles.introImageContainer}>
-          <img
-            src={introImg}
-            alt="Ilustração da intro"
-            className={styles.introImg}
-            loading="lazy"
-          />
+<figure className={styles.showcase} aria-label="Exemplos de sites e sistemas desenvolvidos para clientes">
+    <div className={styles.glow} aria-hidden="true" />
+    <div className={styles.desktop}>
+      <div className={styles.browserBar}><span className={styles.dots} aria-hidden="true"><i /><i /><i /></span><span>Intermarine / Gestão industrial</span></div>
+      <img src={desktopProject.imageSource} alt="Portal Intermarine com ordens de fabricação e indicadores de produção" />
+    </div>
+    <div className={styles.phone}>
+      <span className={styles.speaker} aria-hidden="true" />
+      <img src="/img/hero-aquarius-mobile.png" alt={`Versão mobile do site ${mobileProject.title}`} />
+    </div>
+    <figcaption className={styles.caption}><span aria-hidden="true" />Sites e sistemas de clientes reais</figcaption>
+  </figure>
         </div>
       </div>
     </div>

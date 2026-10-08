@@ -1,4 +1,8 @@
 .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
   position: relative;
   padding: 12px 20px;
   border-radius: 6px;
@@ -45,8 +49,8 @@
     radial-gradient(circle, #7d2ae8 20%, transparent 20%),
     radial-gradient(circle, #7d2ae8 20%, transparent 20%),
     radial-gradient(circle, #7d2ae8 20%, transparent 20%);
-  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
-    10% 10%, 18% 18%;
+  background-size: 15px 15px, 30px 30px, 22px 22px, 30px 30px, 27px 27px, 15px 15px, 22px 22px,
+    15px 15px, 27px 27px;
   background-position: 50% 120%;
   animation: greentopBubbles 0.6s ease;
 }
@@ -78,7 +82,7 @@
     radial-gradient(circle, #7d2ae8 20%, transparent 20%),
     radial-gradient(circle, #7d2ae8 20%, transparent 20%),
     radial-gradient(circle, #7d2ae8 20%, transparent 20%);
-  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+  background-size: 22px 22px, 30px 30px, 27px 27px, 30px 30px, 22px 22px, 30px 30px, 27px 27px;
   background-position: 50% 0%;
   animation: greenbottomBubbles 0.6s ease;
 }
