@@ -62,3 +62,5 @@
   .servicesContainer { max-width: var(--container-mobile);  padding-top: 45px;}
   .servicesRow { grid-template-columns: 1fr; }
 }
+
+.servicesIntro { color: var(--color-2); margin-top: 20px; font-size: 1rem; line-height: 1.7; }
