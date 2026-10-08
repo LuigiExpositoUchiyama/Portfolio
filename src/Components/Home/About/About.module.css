@@ -134,3 +134,5 @@
   .achievements { justify-content: center; gap: 30px; margin-top: 40px; }
   .achievementNumber { font-size: 2.5rem; }
 }
+
+.featuredLink { border-color: #7d2ae8; background: rgba(125, 42, 232, 0.15); color: var(--color-7); }

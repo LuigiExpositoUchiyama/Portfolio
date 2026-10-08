@@ -1,5 +1,7 @@
 import React from 'react';
 import PerfilImg from '/Perfil.png';
+import projects from '../../../Data/projects';
+import experiences from '../../../Data/experiences';
 import { Link } from 'react-router-dom';
 import '../../../App.module.css';
 import styles from './About.module.css';
@@ -11,31 +13,24 @@ const About = () => {
         <div className={styles.aboutText}>
           <h1 className="title">Sobre mim</h1>
           <p>
-            Olá! Sou Luigi Uchiyama, formado em Análise e Desenvolvimento de
-            Sistemas e sou focado em criar interfaces digitais bonitas e fáceis
-            de usar, com atenção aos detalhes e à performance (velocidade e
-            eficiência). Transformo ideias em soluções digitais que ajudam
-            pessoas e empresas, como sites, sistemas e painéis de controle.
+            Sou Luigi Uchiyama, formado em Análise e Desenvolvimento de Sistemas. Tenho mais de 2 anos de experiência em desenvolvimento e crio sites e sistemas personalizados para empresas, com foco em interfaces claras, desempenho e facilidade de uso.
           </p>
           <p>
-            Gosto de trabalhar de forma organizada: entender o problema, testar
-            com os usuários e evoluir o projeto rapidamente. Meu objetivo é
-            sempre entregar valor real, garantindo que cada projeto seja útil,
-            funcional e fácil de usar.
+            Minha experiência inclui sites comerciais e sistemas de gestão industrial. Trabalho desde o entendimento da necessidade até a implementação, buscando soluções que ajudem cada cliente a apresentar seu negócio e organizar seus processos.
           </p>
 
           <p className={styles.quickLinksIntro}>
             Quer saber mais sobre meu trabalho? Veja:
           </p>
           <div className={styles.quickLinks}>
+            <Link to="/projects" className={`${styles.quickLink} ${styles.featuredLink}`}>
+              Projetos
+            </Link>
             <Link to="/education" className={styles.quickLink}>
               Formações
             </Link>
             <Link to="/experience" className={styles.quickLink}>
               Experiências
-            </Link>
-            <Link to="/projects" className={styles.quickLink}>
-              Projetos
             </Link>
             <Link to="/certificates" className={styles.quickLink}>
               Certificados
@@ -54,11 +49,11 @@ const About = () => {
 
       <div className={styles.achievements}>
         {[
-          { label: 'graduação', value: '+1' },
-          { label: 'experiências', value: '+4' },
-          { label: 'projetos', value: '+10' },
-          { label: 'certificados', value: '+10' },
-          { label: 'cursos', value: '+12' },
+          { label: 'projetos', value: projects.length },
+          { label: 'graduação', value: '1' },
+          { label: 'experiências', value: experiences.length },
+          { label: 'certificados', value: '10' },
+          { label: 'cursos', value: '12' },
         ].map(({ label, value }) => (
           <p key={label} className={styles.achievementItem}>
             <span className={styles.achievementNumber}>{value}</span>
